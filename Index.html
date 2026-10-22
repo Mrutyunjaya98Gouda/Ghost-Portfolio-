@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mrutyunjaya Gouda — Cybersecurity Engineer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap">
+<style>
+:root{color-scheme:dark;--void:#07090D;--ind:#10151B;--gun:#202A31;--red:#FF3347;--cy:#00E5FF;--am:#FFB347;--gr:#75FF91;--bone:#E7E9E4;--mut:#7E919B;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;background:var(--void);color:var(--bone);font:16px/1.6 'Space Grotesk',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Rajdhani,Impact,sans-serif;margin:0;line-height:.95;letter-spacing:-.01em}
+.m{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:var(--mut)}
+a{color:var(--cy)}:focus-visible{outline:2px solid var(--am);outline-offset:3px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);z-index:50}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:40;display:flex;gap:4px;align-items:center;padding:8px 14px;background:rgba(7,9,13,.88);border-bottom:1px solid var(--gun);overflow-x:auto}
+nav b{font-family:Rajdhani;color:var(--red);font-size:18px;margin-right:auto;white-space:nowrap}
+nav a{font:12px 'IBM Plex Mono',monospace;color:var(--bone);text-decoration:none;padding:8px;white-space:nowrap}nav a:hover{color:var(--red)}
+body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:rgba(7,9,13,.88);z-index:41}
+section{padding:90px 5vw 40px;max-width:1200px;margin:auto}
+h2{font-size:clamp(40px,7vw,84px);color:var(--bone)}h2+p{color:var(--red);font:500 13px 'IBM Plex Mono',monospace;margin:10px 0 28px}
+.clip{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px))}
+.panel{background:var(--ind);border:1px solid var(--gun);padding:18px}
+.btn{font:500 13px 'IBM Plex Mono',monospace;background:transparent;color:var(--bone);border:1px solid var(--red);padding:12px 16px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.btn:hover,.btn[aria-pressed=true]{background:var(--red);color:var(--void)}
+#hero{position:relative;min-height:100vh;min-height:100svh;max-width:none;padding:0;display:flex;align-items:flex-end;overflow:hidden}
+#cv,#cv2{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
+#hud{position:relative;z-index:2;padding:100px 5vw 28px;width:100%;pointer-events:none;background:linear-gradient(0deg,rgba(7,9,13,.9),transparent)}
+#hud>*{pointer-events:auto}
+#hud h1{font-size:clamp(48px,11vw,150px);color:var(--bone);text-shadow:0 0 30px rgba(255,51,71,.5)}
+.des{font:700 clamp(14px,2.2vw,22px) Rajdhani;color:var(--red);letter-spacing:.06em;margin:10px 0}
+.meta{white-space:pre;margin:12px 0}
+.ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
+.ctl label{display:flex;gap:8px;align-items:center}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.tag{display:inline-block;border:1px solid var(--gun);padding:2px 8px;margin:3px 3px 0 0;font:12px 'IBM Plex Mono',monospace;color:var(--cy)}
+details.panel summary{cursor:pointer;font:700 22px Rajdhani;list-style:none;min-height:32px}details.panel summary::marker{content:""}
+.red{color:var(--red)}.am{color:var(--am)}.gr{color:var(--gr)}
+.tl{border-left:1px solid var(--red);padding-left:20px;margin-left:6px}.tl .panel{margin-bottom:16px;position:relative}
+.tl .panel::before{content:"";position:absolute;left:-26px;top:22px;width:11px;height:11px;background:var(--red)}
+#net{width:100%;height:auto;background:var(--ind);border:1px solid var(--gun);display:block}
+#log{height:170px;overflow:auto;white-space:pre-wrap;margin:0}
+.warn{height:8px;background:repeating-linear-gradient(45deg,var(--am) 0 10px,var(--void) 10px 20px);opacity:.7;margin:0 0 10px}
+input,textarea,select{width:100%;background:var(--void);color:var(--bone);border:1px solid var(--gun);padding:12px;font:14px 'IBM Plex Mono',monospace;margin:4px 0 12px}
+#boot{position:fixed;inset:0;z-index:100;background:var(--void);display:flex;flex-direction:column;justify-content:center;padding:6vw}
+#boot pre{font:14px/1.7 'IBM Plex Mono',monospace;color:var(--gr);white-space:pre-wrap;margin:0 0 20px}
+.sr{position:absolute;left:-9999px}
+.jp{position:absolute;right:3vw;top:90px;writing-mode:vertical-rl;font-family:'Noto Sans JP',sans-serif;color:var(--red);opacity:.5;z-index:2;font-size:20px;letter-spacing:.3em}
+footer{padding:30px 5vw 50px;text-align:center}
+@media(max-width:600px){.meta{font-size:11px}.jp{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<div id="boot" role="dialog" aria-label="System initialization"><pre id="bt"></pre><div><button class="btn" id="skip">SKIP INITIALIZATION</button></div></div>
+<nav aria-label="Primary"><b>MG//SYS</b><a href="#hero">CITY</a><a href="#id">IDENTITY</a><a href="#arsenal">ARSENAL</a><a href="#ops">OPERATIONS</a><a href="#lab">LAB</a><a href="#svc">RECORD</a><a href="#arch">ARCHIVE</a><a href="#contact">CONTACT</a></nav>
+
+<header id="hero"><canvas id="cv" aria-hidden="true"></canvas>
+<span class="jp" aria-hidden="true">監視都市</span>
+<div id="hud">
+<div class="m meta" aria-label="Operator metadata">OPERATOR_ID     // MG-001
+ACCESS_LEVEL    // PUBLIC
+SPECIALIZATION  // CYBER DEFENSE
+SYSTEM_STATUS   // ONLINE</div>
+<h1>MRUTYUNJAYA GOUDA</h1>
+<div class="des">CYBERSECURITY ENGINEER / SECURITY RESEARCHER / SYSTEMS PROGRAMMER</div>
+<p style="max-width:52ch;margin:6px 0">Understanding systems. Exposing weaknesses. Engineering stronger defenses.</p>
+<div class="ctl"><a class="btn" href="#id">EXPLORE THE SYSTEM</a><a class="btn" href="#ops">ACCESS PROJECTS ↗</a></div>
+<div class="ctl panel clip" role="group" aria-label="Cyber vision controls">
+<span class="m">VISUAL MODE</span>
+<button class="btn" id="mReal" aria-pressed="true">REALITY</button><button class="btn" id="mCyber" aria-pressed="false">CYBER VISION</button>
+<label class="m">SCANNER RADIUS <input type="range" id="rad" min="10" max="60" value="25" style="width:120px;margin:0"> <span id="radv">25%</span></label>
+<button class="btn" id="lock" aria-pressed="false">LOCK SCANNER</button>
+<span class="m">THREAT ASSESSMENT // SIMULATED</span></div>
+<p class="m" style="margin:8px 0 0">Move the pointer (or touch &amp; drag) to scan. Press <kbd>S</kbd> to toggle the scanner. Hidden overlay data is fictional.</p>
+</div></header>
+
+<section id="id"><h2>IDENTITY / DECLASSIFIED</h2><p>THE PERSON BEHIND THE TERMINAL</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+<div class="panel clip m" style="font-size:14px;color:var(--bone);white-space:pre-wrap">NAME          // MRUTYUNJAYA GOUDA
+ROLE          // CYBERSECURITY ENGINEER
+FOCUS         // OFFENSIVE + DEFENSIVE + CLOUD
+EDUCATION     // B.TECH CSE (CYBERSECURITY &amp; DIGITAL FORENSICS)
+INSTITUTION   // UPES, DEHRADUN
+GRADUATION    // MAY 2027 (EXPECTED)
+STATUS        // ACTIVE</div>
+<div class="panel clip"><p style="margin-top:0">Cybersecurity engineer working across the full security lifecycle, from offensive penetration testing and threat hunting to defensive, zero-trust cloud architecture.</p><p>I close the gap between finding a vulnerability and engineering the fix. I use programming and scripting, AI, and a hacker mindset to build custom DevSecOps and threat-intelligence tools for real enterprise problems.</p>
+<p class="m" style="margin-bottom:0">Learning platforms: TryHackMe, HackTheBox, OverTheWire, BugCrowd, LeetCode, GeeksForGeeks, Cisco NetAcad, IBM SkillsBuild.</p></div></div></section>
+
+<section id="arsenal"><h2>THE ARSENAL</h2><p>TOOLS ARE ONLY AS EFFECTIVE AS THE ENGINEER USING THEM.</p><div class="warn"></div>
+<div class="grid" id="mods"></div></section>
+
+<section id="ops"><h2>CLASSIFIED OPERATIONS</h2><p>ENGINEERED IN THE SHADOWS. BUILT FOR THE REAL WORLD.</p>
+<div class="panel clip" style="border-color:var(--red);margin-bottom:14px" id="swarm">
+<div class="m">OPERATION ID // OP-001 &nbsp; CLASSIFICATION // PUBLIC RELEASE &nbsp; STATUS // <span class="gr">ACTIVE</span> &nbsp; DOMAIN // THREAT INTELLIGENCE</div>
+<h3 style="font-size:44px;margin:10px 0">SWARMSEC</h3><div class="des" style="font-size:16px">Decentralized Threat Intelligence Network</div>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"><div>
+<p><b>Objective.</b> A peer-to-peer threat intelligence platform with secure IOC distribution, cryptographic data validation, and Sybil attack mitigation.</p>
+<p><b>Engineering focus.</b> A fault-tolerant node architecture meant to prevent malicious data injection and keep shared threat intelligence tamper-evident.</p>
+<p class="m">Project is in active development. The diagram is an illustrative sketch, not a statement of shipped features or guarantees. Full architecture notes are in the repository.</p>
+<a class="btn" href="https://github.com/Mrutyunjaya98Gouda" target="_blank" rel="noopener noreferrer">GITHUB PROFILE ↗</a></div>
+<div><canvas id="swc" width="440" height="260" style="width:100%;background:var(--void);border:1px solid var(--gun)" aria-label="Illustrative peer-to-peer node topology. Select a node to inspect it." role="img"></canvas><div class="m" id="swi" aria-live="polite">Click a node to inspect (illustrative).</div></div></div></div>
+<div class="grid" id="projs"></div></section>
+
+<section id="lab"><h2>THREAT SIMULATION LAB</h2><p>OBSERVE THE SYSTEM. UNDERSTAND THE ATTACK SURFACE.</p>
+<p class="m" style="margin-top:-14px">Fully local, deterministic simulation of a fictional network. No real scans or connections are made.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))"><div>
+<canvas id="net" width="520" height="340" aria-label="Simulated network diagram"></canvas>
+<div class="ctl"><button class="btn" id="play">START</button><button class="btn" id="step">STEP</button><button class="btn" id="reset">RESET</button>
+<button class="btn" id="fw" aria-pressed="false">FIREWALL RULE: OFF</button>
+<label class="m">SPEED <select id="spd" style="width:auto;margin:0"><option value="1200">1x</option><option value="600">2x</option><option value="300">4x</option></select></label></div></div>
+<div><div class="panel m" id="tel"></div><pre class="panel m" id="log" aria-live="polite"></pre><div class="panel m" id="insp">Click a node on the diagram to inspect it.</div></div></div></section>
+
+<section id="svc"><h2>SERVICE RECORD</h2><p>EMPLOYMENT, EDUCATION, CERTIFICATIONS</p><div class="tl" id="tl"></div></section>
+
+<section id="arch"><h2>INTELLIGENCE ARCHIVE</h2><p>RESEARCH NOTES AND WRITEUPS</p>
+<div class="panel clip"><label class="m" for="q">SEARCH ARCHIVE</label><input id="q" placeholder="No records to search yet" disabled>
+<p class="m" style="margin:0">ARCHIVE EMPTY // No articles or research have been published yet. Records will appear here once added to the ARCHIVE array in this file (title, date, category, description, URL). Planned categories: Windows Internals, Memory Security, Threat Detection, Secure Systems Design, Networking, Reverse Engineering.</p></div></section>
+
+<section id="contact"><h2>ESTABLISH CONNECTION</h2><p>EVERY SYSTEM HAS AN ENTRY POINT. THIS ONE IS INTENTIONAL.</p>
+<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+<div class="panel clip"><p class="m">CHANNELS // <span class="gr">OPEN</span></p>
+<p><a href="mailto:gmrityunjaya98@outlook.com">gmrityunjaya98@outlook.com</a></p><p><a href="tel:+918712701982">+91 8712701982</a></p>
+<p><a href="https://github.com/Mrutyunjaya98Gouda" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p>
+<p><a href="https://www.linkedin.com/in/Mrutyunjaya-Gouda" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p>
+<p class="m" style="margin-bottom:0">Resume download: add your PDF URL to the RESUME_URL constant in this file to enable the button.</p><a class="btn" id="resume" href="#contact" hidden>DOWNLOAD RESUME ↓</a></div>
+<form class="panel clip" id="cf"><div class="m">TRANSMISSION // OPENS YOUR EMAIL APP</div>
+<label class="m" for="n">SENDER ID</label><input id="n" required maxlength="80">
+<label class="m" for="e">RETURN CHANNEL</label><input id="e" type="email" required maxlength="120">
+<label class="m" for="t">MESSAGE PAYLOAD</label><textarea id="t" rows="4" required maxlength="1500"></textarea>
+<button class="btn" type="submit">COMPOSE TRANSMISSION ↗</button>
+<p class="m">No server backend is configured, so this composes a standard email in your own mail client. It is not encrypted by this site.</p></form></div></section>
+<footer class="m">MG-001 // FICTIONAL 2097 SETTING, FACTUAL PROFESSIONAL RECORD</footer>
+
+<script>
+const RESUME_URL="";
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* DATA from resume */
+const MODS=[
+["SYSTEMS ENGINEERING","C, C++, Rust, Linux / OS internals, Windows OS internals, Shell scripting, Secure coding","Rust USB daemon in Project Aegis; Python sandbox with OS isolation"],
+["OFFENSIVE SECURITY &amp; APPSEC","Vulnerability assessment, Pentesting, OWASP Top 10, Automated recon, Red teaming, Burp Suite, OWASP ZAP, Hydra, Medusa, Nmap","Pen-test roles at Nexus Ocean AI and InLighnX Global"],
+["DEFENSIVE SECURITY","Security monitoring, Log analysis, Alert triage, SAST/DAST signal parsing, Incident response, SIEM correlation, YARA, Wireshark, tcpdump, Security reporting","YARA scanning and audit logging in Project Aegis"],
+["CLOUD &amp; DEVOPS","AWS, Azure, Terraform, Docker, Git, GitHub, Bash, Ollama","Hybrid datacenter zero-trust blueprint at Cisco"],
+["AI &amp; AUTOMATION","Python, SQL, Claude Code, Claude Agent SDK, GitHub Copilot, Cursor, LLM evals, Prompt engineering, Security automation","Custom DevSecOps and threat-intel tooling"],
+["GOVERNANCE &amp; COMPLIANCE","Generative AI security, ISO 27001, NIST CSF, SOC 2, Risk &amp; compliance auditing, NIST SP 800-53","NIST SP 800-53 audit logging in Project Aegis"]];
+$('#mods').innerHTML=MODS.map(m=>`<details class="panel clip"><summary>${m[0]}</summary><div style="margin-top:8px">${m[1].split(', ').map(x=>`<span class="tag">${x}</span>`).join('')}<p class="m"><span class="am">EVIDENCE //</span> ${m[2]}</p></div></details>`).join('');
+const PROJ=[
+["OP-002","PROJECT AEGIS","Zero-Trust USB Security Suite","ENDPOINT SECURITY","Rust, YARA","Built a Rust USB security daemon with device interception, entropy analysis, YARA scanning, and HID spoof detection against BadUSB and ransomware threats. Reported ~12% lower unauthorized USB persistence risk and 18% better endpoint compliance through NIST SP 800-53 audit logging."],
+["OP-003","CONTROLLED-EXECUTION-SANDBOX","Python sandbox for untrusted code","SECURE EXECUTION","Python","Built a 6-layer security pipeline for safely running untrusted code and shell commands. Using OS isolation, AST detection, and security policies, reported a 37% smaller injection attack surface and 23% better execution safety."]];
+$('#projs').innerHTML=PROJ.map(p=>`<article class="panel clip"><div class="m">${p[0]} // PUBLIC RELEASE // ${p[3]}</div><h3 style="font-size:32px;margin:8px 0">${p[1]}</h3><div class="des" style="font-size:15px">${p[2]}</div><span class="tag">${p[4]}</span><p>${p[5]}</p><a class="btn" href="https://github.com/Mrutyunjaya98Gouda" target="_blank" rel="noopener noreferrer">GITHUB PROFILE ↗</a></article>`).join('');
+const SVC=[
+["EXPERIENCE","Cisco","Cybersecurity Intern","June 2026 – August 2026",["Architected a hybrid datacenter security blueprint integrating zero-trust and network segmentation.","Completed advanced Cisco security coursework to build threat models balancing defense-in-depth with operational simplicity.","Delivered implementation blueprints that reduced network complexity by ~22%."]],
+["EXPERIENCE","InLighnX Global Pvt. Ltd.","Offensive Security Intern","November 2025 – February 2026",["Ran penetration tests and red teaming on simulated enterprise environments.","Exploited OWASP Top 10 vulnerabilities with industry tools and custom scripts.","Wrote CVSS-rated reports with reproducible lab workflows, reducing remediation turnaround by ~30%."]],
+["EXPERIENCE","Nexus Ocean AI","Penetration Tester","June 2025 – August 2025",["Tested SQLi, XSS, authentication flaws and misconfigurations across 5+ production systems.","Used Burp Suite, OWASP ZAP, Hydra/Medusa and Nmap.","Delivered CVSS-rated reports with remediation guidance, reducing exploitable vulnerabilities by ~26%."]],
+["POSITION OF RESPONSIBILITY","National Service Scheme (NSS)","Technical Coordinator","August 2023 – May 2026",["Managed and supported 10+ digital literacy and IT awareness programs for local communities."]],
+["EDUCATION","UPES, Dehradun","B.Tech CSE (Cybersecurity and Digital Forensics)","August 2023 – May 2027 (expected)",[]],
+["CERTIFICATIONS","Completed","Ethical Hacking (GUVI) · Linux Unhatched (Cisco Networking Academy) · Level Up Cybersecurity with Generative AI (IBM SkillsBuild) · Mastercard Cybersecurity Job Simulation (Forage) · Remote Sensing &amp; Digital Image Analysis (ISRO)","",[]],
+["CERTIFICATIONS","In progress","TryHackMe Cybersecurity · ISC2 Certified in Cybersecurity (CC) · CompTIA Security+","",[]]];
+$('#tl').innerHTML=SVC.map(s=>`<div class="panel"><div class="m">${s[0]} ${s[3]?'// '+s[3]:''}</div><h3 style="font-size:28px;margin:6px 0">${s[1]}</h3><div class="red">${s[2]}</div>${s[4].length?'<ul>'+s[4].map(x=>`<li>${x}</li>`).join('')+'</ul>':''}</div>`).join('');
+if(RESUME_URL){const r=$('#resume');r.href=RESUME_URL;r.hidden=false;r.setAttribute('download','')}
+$('#cf').onsubmit=e=>{e.preventDefault();const b=encodeURIComponent($('#t').value+'\n\nFrom: '+$('#n').value+' <'+$('#e').value+'>');location.href='mailto:gmrityunjaya98@outlook.com?subject='+encodeURIComponent('Portfolio inquiry from '+$('#n').value)+'&body='+b};
+
+/* BOOT */
+const boot=$('#boot');let seen=false;try{seen=sessionStorage.getItem('b')}catch(e){}
+function endBoot(){boot.remove();try{sessionStorage.setItem('b',1)}catch(e){}}
+if(seen||RM)boot.remove();else{
+const L=["NEURAL INTERFACE // INITIALIZING","","[ OK ] Establishing session","[ OK ] Loading operator identity","[ OK ] Synchronizing intelligence database","[ OK ] Rendering tactical environment","","ACCESS LEVEL: VISITOR","CONNECTION: ESTABLISHED","","WELCOME TO THE UNDERGROUND."];
+let i=0;const iv=setInterval(()=>{$('#bt').textContent+=L[i++]+"\n";if(i>=L.length){clearInterval(iv);setTimeout(()=>boot.isConnected&&endBoot(),500)}},200);
+$('#skip').onclick=()=>{clearInterval(iv);endBoot()};$('#skip').focus()}
+
+/* CITY: two layers sharing geometry */
+const cv=$('#cv'),cx=cv.getContext('2d');let W,H,dpr,bld=[],drops=[],drones=[],px=.5,py=.5,mx=-999,my=-999,locked=false,full=false,rad=.25,vis=true,flash=0;
+function rnd(s){return()=>(s=(s*16807)%2147483647)/2147483647}
+function build(){const r=rnd(7);bld=[];for(let l=0;l<3;l++){let x=-20;while(x<W+40){const w=40+r()*70*(1+l*.3),h=H*(.25+r()*.45)*(1-l*.15);bld.push({x,w,h,l,sig:r()<.18,hue:r(),win:r()});x+=w+4}}
+drops=Array.from({length:W<700?120:260},()=>({x:r()*W,y:r()*H,v:.6+r()}));drones=Array.from({length:4},(_,i)=>({x:r()*W,y:H*(.15+r()*.3),v:.2+r()*.3}))}
+function size(){dpr=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);build()}
+function city(c,cyber,t){c.fillStyle='#07090D';c.fillRect(0,0,W,H);
+const g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,cyber?'#05161a':'#10151B');g.addColorStop(1,'#1a0a10');c.fillStyle=g;c.fillRect(0,0,W,H);
+const cen=[];
+bld.forEach(b=>{const o=(px-.5)*(14+b.l*26),x=b.x+o,y=H-b.h,sh=['#141b21','#1a232a','#202A31'][b.l];
+c.fillStyle=cyber?'#031014':sh;c.fillRect(x,y,b.w,b.h);
+if(cyber){c.strokeStyle='rgba(0,229,255,.55)';c.lineWidth=1;c.strokeRect(x+.5,y+.5,b.w,b.h)}
+else{c.fillStyle='rgba(255,51,71,.5)';for(let wy=y+10;wy<H-10;wy+=14)for(let wx=x+6;wx<x+b.w-6;wx+=10)if(((wx*7+wy*13)|0)%9<1+b.win*2)c.fillRect(wx,wy,3,5)}
+if(b.sig&&b.l<2){c.fillStyle=cyber?'rgba(255,179,71,.9)':'rgba(255,51,71,'+(.55+.35*Math.sin(t/300+b.x))+')';c.fillRect(x+4,y+20,b.w*.35,b.h*.2)}
+if(b.l===1)cen.push([x+b.w/2,y+8,b])});
+if(cyber){c.lineWidth=1;cen.forEach((a,i)=>{const n=cen[(i+3)%cen.length];c.strokeStyle='rgba(0,229,255,.35)';c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(n[0],n[1]);c.stroke();const p=(t/1500+i*.13)%1;c.fillStyle='#75FF91';c.fillRect(a[0]+(n[0]-a[0])*p-2,a[1]+(n[1]-a[1])*p-2,4,4);if(a[2].sig){c.strokeStyle='#FF3347';c.beginPath();c.arc(a[0],a[1],12+4*Math.sin(t/200),0,6.3);c.stroke()}});
+c.fillStyle='#FFB347';c.font='11px IBM Plex Mono,monospace';c.fillText('SIMULATED // NODE COMPROMISED',W*.08,H*.12);c.fillText('SIMULATED // TRUST BOUNDARY',W*.55,H*.2)}
+drones.forEach(d=>{const x=d.x,y=d.y;c.fillStyle=cyber?'#00E5FF':'#7E919B';c.fillRect(x,y,10,3);if(cyber){c.strokeStyle='rgba(0,229,255,.3)';c.beginPath();c.moveTo(x+5,y);c.lineTo(x-30,y+90);c.lineTo(x+40,y+90);c.closePath();c.stroke()}})}
+let last=0;function frame(t){requestAnimationFrame(frame);if(!vis)return;const dt=Math.min(50,t-last);last=t;
+drones.forEach(d=>{d.x+=d.v*dt*.06;if(d.x>W+20)d.x=-20});
+cx.save();city(cx,full,t);
+if(!full&&mx>-900){const R=rad*Math.min(W,H)*(W<700?1.1:1);cx.save();cx.beginPath();cx.arc(mx,my,R,0,6.3);cx.clip();city(cx,true,t);cx.restore();cx.strokeStyle='#FF3347';cx.lineWidth=1.5;cx.beginPath();cx.arc(mx,my,R,0,6.3);cx.stroke();cx.beginPath();cx.moveTo(mx-R-8,my);cx.lineTo(mx-R+10,my);cx.moveTo(mx+R-10,my);cx.lineTo(mx+R+8,my);cx.moveTo(mx,my-R-8);cx.lineTo(mx,my-R+10);cx.moveTo(mx,my+R-10);cx.lineTo(mx,my+R+8);cx.stroke()}
+if(!RM){cx.strokeStyle='rgba(170,200,220,.35)';cx.lineWidth=1;cx.beginPath();drops.forEach(d=>{d.y+=d.v*dt*.9;d.x-=dt*.05;if(d.y>H){d.y=-10;d.x=Math.random()*W+40}cx.moveTo(d.x,d.y);cx.lineTo(d.x+2,d.y+12)});cx.stroke();
+if(Math.random()<.0015)flash=1;if(flash>0){cx.fillStyle='rgba(200,220,255,'+flash*.18+')';cx.fillRect(0,0,W,H);flash-=dt/250}}
+cx.restore()}
+size();addEventListener('resize',size);requestAnimationFrame(frame);
+document.addEventListener('visibilitychange',()=>vis=!document.hidden);
+function pt(e){if(locked)return;const r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;px=mx/W;py=my/H}
+$('#hero').addEventListener('pointermove',pt);$('#hero').addEventListener('pointerdown',e=>{if(e.target.closest('#hud>*:not(.ctl.panel)')&&e.target.closest('a,button,input,label'))return;pt(e)});
+cv.addEventListener('click',()=>{locked=!locked;lk()});
+function lk(){$('#lock').setAttribute('aria-pressed',locked);$('#lock').textContent=locked?'UNLOCK SCANNER':'LOCK SCANNER'}
+$('#lock').onclick=()=>{locked=!locked;lk()};
+function mode(f){full=f;$('#mCyber').setAttribute('aria-pressed',f);$('#mReal').setAttribute('aria-pressed',!f)}
+$('#mReal').onclick=()=>mode(false);$('#mCyber').onclick=()=>mode(true);
+$('#rad').oninput=e=>{rad=e.target.value/100;$('#radv').textContent=e.target.value+'%'};
+addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;if(e.key==='s'||e.key==='S'){if(mx<-900){mx=W/2;my=H/2}else{mx=-999;locked=false;lk()}}});
+
+/* SWARMSEC illustrative topology */
+(function(){const c=$('#swc'),x=c.getContext('2d'),N=[];for(let i=0;i<8;i++){const a=i/8*6.283;N.push({x:220+Math.cos(a)*(i%2?85:150),y:130+Math.sin(a)*(i%2?55:100)})}
+let sel=-1,tm=0;function d(){x.clearRect(0,0,440,260);x.strokeStyle='#202A31';N.forEach((a,i)=>[1,3].forEach(k=>{const b=N[(i+k)%8];x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}));
+if(sel>=0){x.strokeStyle='#00E5FF';N.forEach((b,i)=>{if(i!==sel){x.beginPath();x.moveTo(N[sel].x,N[sel].y);x.lineTo(b.x,b.y);x.stroke()}})}
+N.forEach((n,i)=>{x.fillStyle=i===sel?'#00E5FF':'#FF3347';x.fillRect(n.x-7,n.y-7,14,14)});x.fillStyle='#7E919B';x.font='11px IBM Plex Mono,monospace';x.fillText('ILLUSTRATIVE PEER-TO-PEER MESH',8,252)}
+d();c.onclick=e=>{const r=c.getBoundingClientRect(),px=(e.clientX-r.left)*440/r.width,py=(e.clientY-r.top)*260/r.height;sel=N.findIndex(n=>Math.abs(n.x-px)<16&&Math.abs(n.y-py)<16);$('#swi').textContent=sel>=0?'PEER '+(sel+1)+' // illustrative peer that would share and validate IOCs with other peers.':'Click a node to inspect (illustrative).';d()}})();
+
+/* THREAT LAB: deterministic event engine */
+(function(){const c=$('#net'),x=c.getContext('2d');
+const NODES=[["WS-1",60,60,'ws','USER'],["WS-2",60,170,'ws','USER'],["WS-3",60,280,'ws','USER'],["FW",190,170,'fw','EDGE'],["APP-1",320,90,'app','DMZ'],["APP-2",320,250,'app','DMZ'],["DB-1",460,170,'db','CORE'],["SIEM",190,40,'siem','MGMT']].map((n,i)=>({id:i,name:n[0],x:n[1],y:n[2],type:n[3],zone:n[4]}));
+const LINKS=[[0,3],[1,3],[2,3],[3,4],[3,5],[4,6],[5,6],[7,3]];
+/* Fixed script; step(i) transitions. Firewall rule ON blocks events flagged b:1 */
+const EV=[
+{m:"WS-2 failed login x5 (simulated brute force)",n:1,a:1},
+{m:"WS-2 outbound connection to unknown host",n:1,a:1,b:1},
+{m:"WS-2 probes APP-2 on port 8080",n:5,a:1,b:1},
+{m:"SIEM correlates events, alert raised",n:7,a:1},
+{m:"APP-2 policy violation: unexpected process",n:5,a:1,b:1},
+{m:"SIEM recommends isolating WS-2",n:7,a:0},
+{m:"WS-2 isolated from network",n:1,iso:1},
+{m:"DB-1 connection attempt from WS-2 denied",n:6,a:0}];
+let st,timer=null,fw=false;
+function init(){st={i:0,alerts:0,iso:new Set(),log:[],blocked:0,hit:new Set()}}
+function step(){if(st.i>=EV.length){pause();return}const e=EV[st.i++];let txt=e.m;
+if(fw&&e.b){st.blocked++;txt+=" // BLOCKED by firewall rule"}else{if(e.a)st.alerts++;if(e.iso)st.iso.add(e.n);st.hit.add(e.n)}
+if(fw&&e.a&&e.b)st.alerts++;
+st.log.push(`[${String(st.i).padStart(2,'0')}] ${txt}`);draw()}
+function pause(){clearInterval(timer);timer=null;$('#play').textContent=st.i>=EV.length?'DONE':'START'}
+function draw(){x.clearRect(0,0,520,340);x.lineWidth=1;LINKS.forEach(l=>{const a=NODES[l[0]],b=NODES[l[1]];x.strokeStyle=(st.iso.has(l[0])||st.iso.has(l[1]))?'#FF3347':'#202A31';x.setLineDash(st.iso.has(l[0])?[4,4]:[]);x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()});x.setLineDash([]);
+NODES.forEach(n=>{const col=st.iso.has(n.id)?'#FF3347':st.hit.has(n.id)?'#FFB347':n.type==='siem'?'#75FF91':'#00E5FF';x.strokeStyle=col;x.fillStyle='#07090D';x.lineWidth=2;x.fillRect(n.x-24,n.y-14,48,28);x.strokeRect(n.x-24,n.y-14,48,28);x.fillStyle='#E7E9E4';x.font='11px IBM Plex Mono,monospace';x.textAlign='center';x.fillText(n.name,n.x,n.y+4)});x.textAlign='left';x.fillStyle='#7E919B';x.fillText('FICTIONAL NETWORK // SIMULATED',8,334);
+$('#tel').textContent=`NETWORK STATUS      // SIMULATED\nACTIVE HOSTS        // ${String(8-st.iso.size).padStart(2,'0')}\nSECURITY ALERTS     // ${String(st.alerts).padStart(2,'0')}\nISOLATED NODES      // ${String(st.iso.size).padStart(2,'0')}\nBLOCKED BY RULE     // ${String(st.blocked).padStart(2,'0')}\nFIREWALL RULE       // ${fw?'ON':'OFF'}\nEVENT               // ${st.i}/${EV.length}`;
+const L=$('#log');L.textContent=st.log.join('\n')||'Event log empty. Press START or STEP.';L.scrollTop=1e5}
+$('#step').onclick=()=>{pause();step()};
+$('#play').onclick=()=>{if(timer){pause();return}if(st.i>=EV.length)return;$('#play').textContent='PAUSE';timer=setInterval(step,+$('#spd').value)};
+$('#spd').onchange=()=>{if(timer){clearInterval(timer);timer=setInterval(step,+$('#spd').value)}};
+$('#reset').onclick=()=>{pause();init();draw()};
+$('#fw').onclick=e=>{fw=!fw;e.target.setAttribute('aria-pressed',fw);e.target.textContent='FIREWALL RULE: '+(fw?'ON':'OFF');pause();init();draw()};
+c.onclick=e=>{const r=c.getBoundingClientRect(),px=(e.clientX-r.left)*520/r.width,py=(e.clientY-r.top)*340/r.height;const n=NODES.find(n=>Math.abs(n.x-px)<26&&Math.abs(n.y-py)<16);if(n)$('#insp').textContent=`NODE ${n.name} // TYPE ${n.type.toUpperCase()} // ZONE ${n.zone} // STATE ${st.iso.has(n.id)?'ISOLATED':st.hit.has(n.id)?'AFFECTED':'NORMAL'}`};
+init();draw()})();
+</script></body></html>
