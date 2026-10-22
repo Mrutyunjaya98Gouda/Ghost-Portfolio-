@@ -1,243 +1,2506 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
+<html lang="en">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mrutyunjaya Gouda — Cybersecurity Engineer</title>
+<meta name="description" content="Cybersecurity engineer specializing in offensive security, defensive architecture, and cloud security. Portfolio showcasing projects, research, and professional experience.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap">
 <style>
-:root{color-scheme:dark;--void:#07090D;--ind:#10151B;--gun:#202A31;--red:#FF3347;--cy:#00E5FF;--am:#FFB347;--gr:#75FF91;--bone:#E7E9E4;--mut:#7E919B;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-*,*::before,*::after{box-sizing:inherit}html{scroll-behavior:smooth;scroll-padding-top:60px}
-body{margin:0;background:var(--void);color:var(--bone);font:16px/1.6 'Space Grotesk',system-ui,sans-serif;overflow-x:hidden}
-h1,h2,h3{font-family:Rajdhani,Impact,sans-serif;margin:0;line-height:.95;letter-spacing:-.01em}
-.m{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;color:var(--mut)}
-a{color:var(--cy)}:focus-visible{outline:2px solid var(--am);outline-offset:3px}
-body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);z-index:50}
-nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:40;display:flex;gap:4px;align-items:center;padding:8px 14px;background:rgba(7,9,13,.88);border-bottom:1px solid var(--gun);overflow-x:auto}
-nav b{font-family:Rajdhani;color:var(--red);font-size:18px;margin-right:auto;white-space:nowrap}
-nav a{font:12px 'IBM Plex Mono',monospace;color:var(--bone);text-decoration:none;padding:8px;white-space:nowrap}nav a:hover{color:var(--red)}
-body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:rgba(7,9,13,.88);z-index:41}
-section{padding:90px 5vw 40px;max-width:1200px;margin:auto}
-h2{font-size:clamp(40px,7vw,84px);color:var(--bone)}h2+p{color:var(--red);font:500 13px 'IBM Plex Mono',monospace;margin:10px 0 28px}
-.clip{clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px))}
-.panel{background:var(--ind);border:1px solid var(--gun);padding:18px}
-.btn{font:500 13px 'IBM Plex Mono',monospace;background:transparent;color:var(--bone);border:1px solid var(--red);padding:12px 16px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
-.btn:hover,.btn[aria-pressed=true]{background:var(--red);color:var(--void)}
-#hero{position:relative;min-height:100vh;min-height:100svh;max-width:none;padding:0;display:flex;align-items:flex-end;overflow:hidden}
-#cv,#cv2{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y}
-#hud{position:relative;z-index:2;padding:100px 5vw 28px;width:100%;pointer-events:none;background:linear-gradient(0deg,rgba(7,9,13,.9),transparent)}
-#hud>*{pointer-events:auto}
-#hud h1{font-size:clamp(48px,11vw,150px);color:var(--bone);text-shadow:0 0 30px rgba(255,51,71,.5)}
-.des{font:700 clamp(14px,2.2vw,22px) Rajdhani;color:var(--red);letter-spacing:.06em;margin:10px 0}
-.meta{white-space:pre;margin:12px 0}
-.ctl{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
-.ctl label{display:flex;gap:8px;align-items:center}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.tag{display:inline-block;border:1px solid var(--gun);padding:2px 8px;margin:3px 3px 0 0;font:12px 'IBM Plex Mono',monospace;color:var(--cy)}
-details.panel summary{cursor:pointer;font:700 22px Rajdhani;list-style:none;min-height:32px}details.panel summary::marker{content:""}
-.red{color:var(--red)}.am{color:var(--am)}.gr{color:var(--gr)}
-.tl{border-left:1px solid var(--red);padding-left:20px;margin-left:6px}.tl .panel{margin-bottom:16px;position:relative}
-.tl .panel::before{content:"";position:absolute;left:-26px;top:22px;width:11px;height:11px;background:var(--red)}
-#net{width:100%;height:auto;background:var(--ind);border:1px solid var(--gun);display:block}
-#log{height:170px;overflow:auto;white-space:pre-wrap;margin:0}
-.warn{height:8px;background:repeating-linear-gradient(45deg,var(--am) 0 10px,var(--void) 10px 20px);opacity:.7;margin:0 0 10px}
-input,textarea,select{width:100%;background:var(--void);color:var(--bone);border:1px solid var(--gun);padding:12px;font:14px 'IBM Plex Mono',monospace;margin:4px 0 12px}
-#boot{position:fixed;inset:0;z-index:100;background:var(--void);display:flex;flex-direction:column;justify-content:center;padding:6vw}
-#boot pre{font:14px/1.7 'IBM Plex Mono',monospace;color:var(--gr);white-space:pre-wrap;margin:0 0 20px}
-.sr{position:absolute;left:-9999px}
-.jp{position:absolute;right:3vw;top:90px;writing-mode:vertical-rl;font-family:'Noto Sans JP',sans-serif;color:var(--red);opacity:.5;z-index:2;font-size:20px;letter-spacing:.3em}
-footer{padding:30px 5vw 50px;text-align:center}
-@media(max-width:600px){.meta{font-size:11px}.jp{display:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head><body>
-<div id="boot" role="dialog" aria-label="System initialization"><pre id="bt"></pre><div><button class="btn" id="skip">SKIP INITIALIZATION</button></div></div>
-<nav aria-label="Primary"><b>MG//SYS</b><a href="#hero">CITY</a><a href="#id">IDENTITY</a><a href="#arsenal">ARSENAL</a><a href="#ops">OPERATIONS</a><a href="#lab">LAB</a><a href="#svc">RECORD</a><a href="#arch">ARCHIVE</a><a href="#contact">CONTACT</a></nav>
+/* ═══════════════════════════════════════════════
+   DESIGN TOKENS
+   ═══════════════════════════════════════════════ */
+:root {
+  color-scheme: dark;
+  --void: #07090D;
+  --ind: #10151B;
+  --gun: #202A31;
+  --red: #FF3347;
+  --cy: #00E5FF;
+  --am: #FFB347;
+  --gr: #75FF91;
+  --bone: #E7E9E4;
+  --mut: #7E919B;
+  --glow-red: rgba(255, 51, 71, 0.5);
+  --glow-cy: rgba(0, 229, 255, 0.4);
+  --glow-am: rgba(255, 179, 71, 0.4);
+  /* Apple-like spring easing */
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
 
-<header id="hero"><canvas id="cv" aria-hidden="true"></canvas>
-<span class="jp" aria-hidden="true">監視都市</span>
-<div id="hud">
-<div class="m meta" aria-label="Operator metadata">OPERATOR_ID     // MG-001
+*, *::before, *::after { box-sizing: inherit; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+}
+
+/* ═══════════════════════════════════════════════
+   CUSTOM CURSOR — LAG-FREE HARDWARE HYBRID
+   ═══════════════════════════════════════════════ */
+#cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 50%;
+  opacity: 0;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(0, 229, 255, 0.55);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.25);
+  will-change: transform;
+  transition: width 0.25s var(--spring), height 0.25s var(--spring),
+              border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+#cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10000;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cy);
+  box-shadow: 0 0 6px var(--cy);
+  opacity: 0;
+  will-change: transform;
+}
+#cursor-ring.hover {
+  width: 48px;
+  height: 48px;
+  border-color: rgba(255, 51, 71, 0.85);
+  background: rgba(255, 51, 71, 0.08);
+  box-shadow: 0 0 16px rgba(255, 51, 71, 0.4);
+}
+#cursor-dot.hover {
+  background: var(--red);
+  box-shadow: 0 0 8px var(--red);
+}
+#cursor-ring.clicking {
+  width: 24px;
+  height: 24px;
+  border-color: rgba(255, 51, 71, 1);
+  background: rgba(255, 51, 71, 0.25);
+}
+
+@media (hover: none) {
+  #cursor-dot, #cursor-ring { display: none !important; }
+}
+
+/* ═══════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════ */
+body {
+  margin: 0;
+  background: var(--void);
+  color: var(--bone);
+  font: 16px/1.6 'Space Grotesk', system-ui, sans-serif;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+h1, h2, h3 {
+  font-family: Rajdhani, Impact, sans-serif;
+  margin: 0;
+  line-height: .95;
+  letter-spacing: -.01em;
+}
+
+.m {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--mut);
+}
+
+a { color: var(--cy); cursor: pointer; text-decoration: none; }
+button, input, textarea, select { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--am); outline-offset: 3px; }
+
+/* Scanline overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,.08) 0 1px, transparent 1px 3px);
+  z-index: 50;
+  opacity: 0.5;
+}
+
+/* ═══════════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════════ */
+nav {
+  position: fixed;
+  top: env(safe-area-inset-top, 0px);
+  left: 0; right: 0;
+  z-index: 40;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 8px 14px;
+  background: rgba(7,9,13,.85);
+  border-bottom: 1px solid var(--gun);
+  overflow-x: auto;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  transition: background 0.5s var(--smooth);
+}
+
+nav.scrolled {
+  background: rgba(7,9,13,.95);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: env(safe-area-inset-top, 0px);
+  background: rgba(7,9,13,.92);
+  z-index: 41;
+}
+
+nav b {
+  font-family: Rajdhani;
+  color: var(--red);
+  font-size: 18px;
+  margin-right: auto;
+  white-space: nowrap;
+  transition: text-shadow 0.3s ease;
+}
+
+nav b:hover {
+  text-shadow: 0 0 12px var(--glow-red);
+}
+
+nav a {
+  font: 12px 'IBM Plex Mono', monospace;
+  color: var(--bone);
+  text-decoration: none;
+  padding: 8px;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.4s var(--smooth);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--red), var(--cy));
+  transition: width 0.5s var(--smooth), left 0.5s var(--smooth);
+}
+
+nav a:hover { color: var(--red); }
+nav a:hover::after { width: 80%; left: 10%; }
+
+/* ═══════════════════════════════════════════════
+   LAYOUT
+   ═══════════════════════════════════════════════ */
+section {
+  padding: 90px 5vw 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h2 {
+  font-size: clamp(40px, 7vw, 84px);
+  color: var(--bone);
+  transition: text-shadow 0.4s ease;
+}
+
+h2:hover {
+  text-shadow: 0 0 40px rgba(255,51,71,0.3);
+}
+
+h2 + p {
+  color: var(--red);
+  font: 500 13px 'IBM Plex Mono', monospace;
+  margin: 10px 0 28px;
+}
+
+/* ═══════════════════════════════════════════════
+   COMPONENTS — 3D TILT PANELS
+   ═══════════════════════════════════════════════ */
+.clip {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+.panel {
+  position: relative;
+  background: var(--ind);
+  border: 1px solid var(--gun);
+  padding: 18px;
+  transition: border-color 0.4s var(--smooth),
+              box-shadow 0.4s var(--smooth),
+              transform 0.5s var(--smooth);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+.panel:hover {
+  border-color: rgba(0, 229, 255, 0.4);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4),
+              0 0 20px rgba(0, 229, 255, 0.1),
+              inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.panel-glare {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity 0.35s ease;
+  z-index: 5;
+}
+
+.btn {
+  font: 500 13px 'IBM Plex Mono', monospace;
+  background: transparent;
+  color: var(--bone);
+  border: 1px solid var(--red);
+  padding: 12px 16px;
+  min-height: 44px;
+  cursor: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s var(--smooth);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-out-expo);
+  z-index: -1;
+}
+
+.btn:hover::before, .btn[aria-pressed="true"]::before {
+  transform: scaleX(1);
+}
+
+.btn:hover, .btn[aria-pressed="true"] {
+  color: var(--void);
+  box-shadow: 0 4px 20px var(--glow-red);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.97);
+  transition-duration: 0.1s;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: start;
+}
+
+#mods {
+  align-items: start;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid var(--gun);
+  padding: 2px 8px;
+  margin: 3px 3px 0 0;
+  font: 12px 'IBM Plex Mono', monospace;
+  color: var(--cy);
+  transition: all 0.4s var(--spring);
+}
+
+.tag:hover {
+  border-color: var(--cy);
+  box-shadow: 0 0 12px var(--glow-cy);
+  transform: translateY(-2px) scale(1.05);
+  background: rgba(0, 229, 255, 0.06);
+}
+
+details.panel {
+  position: relative;
+  align-self: start;
+}
+
+details.panel summary {
+  cursor: pointer;
+  font: 700 22px Rajdhani;
+  list-style: none;
+  min-height: 32px;
+  transition: color 0.4s var(--smooth), padding-left 0.4s var(--smooth);
+  padding-left: 0;
+}
+
+details.panel summary::marker { content: ""; }
+
+details.panel summary::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.4s var(--spring);
+  color: var(--red);
+}
+
+details.panel[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details.panel summary:hover {
+  color: var(--cy);
+  padding-left: 4px;
+}
+
+details.panel[open] {
+  border-color: var(--cy);
+  box-shadow: 0 4px 24px rgba(0, 229, 255, 0.06);
+}
+
+details.panel > div {
+  animation: expandIn 0.5s var(--ease-out-expo);
+}
+
+@keyframes expandIn {
+  from { opacity: 0; transform: translateY(-8px); max-height: 0; }
+  to { opacity: 1; transform: translateY(0); max-height: 500px; }
+}
+
+.red { color: var(--red); }
+.am { color: var(--am); }
+.gr { color: var(--gr); }
+
+/* ═══════════════════════════════════════════════
+   SCROLL REVEAL — APPLE-STYLE
+   ═══════════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px) scale(0.98);
+  transition: opacity 1s var(--ease-out-expo),
+              transform 1s var(--ease-out-expo);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-70px) scale(0.98);
+  transition: opacity 1s var(--ease-out-expo),
+              transform 1s var(--ease-out-expo);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.stagger > * {
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 0.7s var(--ease-out-expo),
+              transform 0.7s var(--ease-out-expo);
+}
+
+.stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.stagger.visible > *:nth-child(1) { transition-delay: 0.06s; }
+.stagger.visible > *:nth-child(2) { transition-delay: 0.14s; }
+.stagger.visible > *:nth-child(3) { transition-delay: 0.22s; }
+.stagger.visible > *:nth-child(4) { transition-delay: 0.30s; }
+.stagger.visible > *:nth-child(5) { transition-delay: 0.38s; }
+.stagger.visible > *:nth-child(6) { transition-delay: 0.46s; }
+
+/* ═══════════════════════════════════════════════
+   HERO SECTION
+   ═══════════════════════════════════════════════ */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  max-width: none;
+  padding: 0;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+#cv {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: pan-y;
+}
+
+#hud {
+  position: relative;
+  z-index: 2;
+  padding: 100px 5vw 28px;
+  width: 100%;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(7,9,13,.95) 0%, rgba(7,9,13,.7) 35%, rgba(7,9,13,.2) 60%, transparent 100%);
+}
+
+#hud > * { pointer-events: auto; }
+
+#hud h1 {
+  font-size: clamp(48px, 11vw, 150px);
+  color: var(--bone);
+  text-shadow: 0 0 40px var(--glow-red), 0 0 80px rgba(255,51,71,.2);
+  animation: glitchPulse 5s ease-in-out infinite;
+}
+
+@keyframes glitchPulse {
+  0%, 100% { text-shadow: 0 0 40px var(--glow-red), 0 0 80px rgba(255,51,71,.15); }
+  48% { text-shadow: 0 0 50px var(--glow-red), 0 0 100px rgba(255,51,71,.2); }
+  50% { text-shadow: 0 0 60px var(--glow-red), 0 0 120px rgba(255,51,71,.3), 3px 0 var(--cy), -2px 0 var(--red); }
+  52% { text-shadow: -2px 0 var(--am), 0 0 40px var(--glow-red); }
+  54% { text-shadow: 0 0 40px var(--glow-red), 0 0 80px rgba(255,51,71,.15); }
+}
+
+.des {
+  font: 700 clamp(14px, 2.2vw, 22px) Rajdhani;
+  color: var(--red);
+  letter-spacing: .06em;
+  margin: 10px 0;
+}
+
+.meta { white-space: pre; margin: 12px 0; }
+
+.ctl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.ctl label { display: flex; gap: 8px; align-items: center; }
+
+.jp {
+  position: absolute;
+  right: 3vw;
+  top: 90px;
+  writing-mode: vertical-rl;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--red);
+  opacity: .5;
+  z-index: 2;
+  font-size: 20px;
+  letter-spacing: .3em;
+  animation: floatJP 8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+@keyframes floatJP {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(-16px); opacity: 0.7; }
+}
+
+/* ═══════════════════════════════════════════════
+   TIMELINE
+   ═══════════════════════════════════════════════ */
+.tl {
+  border-left: 2px solid var(--gun);
+  padding-left: 20px;
+  margin-left: 6px;
+  position: relative;
+}
+
+.tl::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background: linear-gradient(180deg, var(--red), var(--cy));
+  animation: none;
+}
+
+.tl.visible::before {
+  animation: timelineGrow 2.5s var(--ease-out-expo) forwards;
+}
+
+@keyframes timelineGrow {
+  to { height: 100%; }
+}
+
+.tl .panel {
+  margin-bottom: 16px;
+  position: relative;
+  transition: border-color 0.5s var(--smooth),
+              box-shadow 0.5s var(--smooth),
+              transform 0.5s var(--smooth);
+}
+
+.tl .panel:hover {
+  transform: translateX(6px) translateY(-2px);
+}
+
+.tl .panel::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  background: var(--red);
+  border-radius: 50%;
+  transition: all 0.5s var(--spring);
+  box-shadow: 0 0 0 3px var(--void);
+}
+
+.tl .panel:hover::before {
+  background: var(--cy);
+  box-shadow: 0 0 16px var(--glow-cy), 0 0 0 3px var(--void);
+  transform: scale(1.4);
+}
+
+/* ═══════════════════════════════════════════════
+   THREAT LAB
+   ═══════════════════════════════════════════════ */
+#net {
+  width: 100%;
+  height: auto;
+  background: var(--ind);
+  border: 1px solid var(--gun);
+  display: block;
+  transition: border-color 0.3s ease;
+}
+
+#net:hover {
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+#log {
+  height: 170px;
+  overflow: auto;
+  white-space: pre-wrap;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.warn {
+  height: 8px;
+  background: repeating-linear-gradient(45deg, var(--am) 0 10px, var(--void) 10px 20px);
+  opacity: .7;
+  margin: 0 0 10px;
+  animation: warnScroll 6s linear infinite;
+}
+
+@keyframes warnScroll {
+  to { background-position: 40px 0; }
+}
+
+/* ═══════════════════════════════════════════════
+   FORMS & INPUTS
+   ═══════════════════════════════════════════════ */
+input, textarea, select {
+  width: 100%;
+  background: var(--void);
+  color: var(--bone);
+  border: 1px solid var(--gun);
+  padding: 12px;
+  font: 14px 'IBM Plex Mono', monospace;
+  margin: 4px 0 12px;
+  transition: border-color 0.4s var(--smooth),
+              box-shadow 0.4s var(--smooth),
+              transform 0.3s var(--smooth);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--cy);
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.12), 0 0 0 3px rgba(0, 229, 255, 0.06);
+  transform: scale(1.005);
+}
+
+/* ═══════════════════════════════════════════════
+   BOOT SEQUENCE
+   ═══════════════════════════════════════════════ */
+#boot {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--void);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6vw;
+}
+
+#boot pre {
+  font: 14px/1.7 'IBM Plex Mono', monospace;
+  color: var(--gr);
+  white-space: pre-wrap;
+  margin: 0 0 20px;
+}
+
+#boot .progress-bar {
+  width: 100%;
+  height: 2px;
+  background: var(--gun);
+  margin-top: 16px;
+  overflow: hidden;
+  border-radius: 1px;
+}
+
+#boot .progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--red), var(--cy), var(--gr));
+  width: 0;
+  transition: width 0.25s var(--smooth);
+  border-radius: 1px;
+}
+
+.boot-fade {
+  animation: bootFadeOut 0.8s var(--ease-out-expo) forwards;
+}
+
+@keyframes bootFadeOut {
+  0% { opacity: 1; transform: scale(1); filter: blur(0); }
+  100% { opacity: 0; transform: scale(1.08); filter: blur(8px); }
+}
+
+/* ═══════════════════════════════════════════════
+   FLOATING PARTICLES OVERLAY
+   ═══════════════════════════════════════════════ */
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION GLOW DIVIDERS
+   ═══════════════════════════════════════════════ */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--red) 20%, var(--cy) 50%, var(--red) 80%, transparent 100%);
+  opacity: 0.25;
+  margin: 0;
+  position: relative;
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  inset: -6px 0;
+  background: inherit;
+  filter: blur(10px);
+  opacity: 0.4;
+}
+
+/* ═══════════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════════ */
+.sr { position: absolute; left: -9999px; }
+
+footer {
+  padding: 30px 5vw 50px;
+  text-align: center;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gun), transparent);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+@media (max-width: 600px) {
+  .meta { font-size: 11px; }
+  .jp { display: none; }
+  #cursor-dot, #cursor-ring { display: none; }
+  body { cursor: auto; }
+  a, button, input, textarea, select { cursor: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal-left, .stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  #hud h1 { animation: none; }
+  .jp { animation: none; }
+  .panel:hover { transform: none; }
+  .btn:hover { transform: none; }
+  .tag:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Boot Sequence -->
+<div id="boot" role="dialog" aria-label="System initialization">
+  <pre id="bt"></pre>
+  <div class="progress-bar"><div class="progress-fill" id="pf"></div></div>
+  <div style="margin-top:16px"><button class="btn" id="skip">SKIP INITIALIZATION</button></div>
+</div>
+
+<!-- Navigation -->
+<nav aria-label="Primary">
+  <b>MG//SYS</b>
+  <a href="#hero">CITY</a>
+  <a href="#id">IDENTITY</a>
+  <a href="#arsenal">ARSENAL</a>
+  <a href="#ops">OPERATIONS</a>
+  <a href="#lab">LAB</a>
+  <a href="#svc">RECORD</a>
+  <a href="#telemetry">PURSUITS</a>
+  <a href="#arch">ARCHIVE</a>
+  <a href="#contact">CONTACT</a>
+</nav>
+
+<!-- Hero -->
+<header id="hero">
+  <canvas id="cv" aria-hidden="true"></canvas>
+  <span class="jp" aria-hidden="true">監視都市</span>
+  <div id="hud">
+    <div class="m meta" aria-label="Operator metadata">OPERATOR_ID     // MG-001
 ACCESS_LEVEL    // PUBLIC
 SPECIALIZATION  // CYBER DEFENSE
 SYSTEM_STATUS   // ONLINE</div>
-<h1>MRUTYUNJAYA GOUDA</h1>
-<div class="des">CYBERSECURITY ENGINEER / SECURITY RESEARCHER / SYSTEMS PROGRAMMER</div>
-<p style="max-width:52ch;margin:6px 0">Understanding systems. Exposing weaknesses. Engineering stronger defenses.</p>
-<div class="ctl"><a class="btn" href="#id">EXPLORE THE SYSTEM</a><a class="btn" href="#ops">ACCESS PROJECTS ↗</a></div>
-<div class="ctl panel clip" role="group" aria-label="Cyber vision controls">
-<span class="m">VISUAL MODE</span>
-<button class="btn" id="mReal" aria-pressed="true">REALITY</button><button class="btn" id="mCyber" aria-pressed="false">CYBER VISION</button>
-<label class="m">SCANNER RADIUS <input type="range" id="rad" min="10" max="60" value="25" style="width:120px;margin:0"> <span id="radv">25%</span></label>
-<button class="btn" id="lock" aria-pressed="false">LOCK SCANNER</button>
-<span class="m">THREAT ASSESSMENT // SIMULATED</span></div>
-<p class="m" style="margin:8px 0 0">Move the pointer (or touch &amp; drag) to scan. Press <kbd>S</kbd> to toggle the scanner. Hidden overlay data is fictional.</p>
-</div></header>
+    <h1>MRUTYUNJAYA GOUDA</h1>
+    <div class="des">CYBERSECURITY ENGINEER / SECURITY RESEARCHER / SYSTEMS PROGRAMMER</div>
+    <p style="max-width:52ch;margin:6px 0">Understanding systems. Exposing weaknesses. Engineering stronger defenses.</p>
+    <div class="ctl">
+      <a class="btn" href="#id">EXPLORE THE SYSTEM</a>
+      <a class="btn" href="#ops">ACCESS PROJECTS ↗</a>
+      <a class="btn" href="https://drive.google.com/file/d/1E5r4kpMKiVfYyCWFpqsWDshVhca3qgYD/view?usp=drive_link" target="_blank" rel="noopener noreferrer">DOWNLOAD RESUME ↓</a>
+    </div>
+    <div class="ctl panel clip" role="group" aria-label="Cyber vision controls">
+      <span class="m">VISUAL MODE</span>
+      <button class="btn" id="mReal" aria-pressed="true">REALITY</button>
+      <button class="btn" id="mCyber" aria-pressed="false">CYBER VISION</button>
+      <label class="m">SCANNER RADIUS <input type="range" id="rad" min="10" max="60" value="25" style="width:120px;margin:0"> <span id="radv">25%</span></label>
+      <button class="btn" id="lock" aria-pressed="false">LOCK SCANNER</button>
+      <span class="m">THREAT ASSESSMENT // SIMULATED</span>
+    </div>
+    <p class="m" style="margin:8px 0 0">Move the pointer (or touch &amp; drag) to scan. Press <kbd>S</kbd> to toggle the scanner. Hidden overlay data is fictional.</p>
+  </div>
+</header>
 
-<section id="id"><h2>IDENTITY / DECLASSIFIED</h2><p>THE PERSON BEHIND THE TERMINAL</p>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-<div class="panel clip m" style="font-size:14px;color:var(--bone);white-space:pre-wrap">NAME          // MRUTYUNJAYA GOUDA
+<div class="section-divider"></div>
+
+<!-- Identity -->
+<section id="id">
+  <div class="reveal">
+    <h2>IDENTITY / DECLASSIFIED</h2>
+    <p>THE PERSON BEHIND THE TERMINAL</p>
+  </div>
+  <div class="grid stagger" style="grid-template-columns:repeat(auto-fit,minmax(270px,1fr));align-items:start">
+    <!-- Operator Photo Badge -->
+    <div class="panel clip" style="padding:12px;background:var(--ind);">
+      <div style="position:relative;overflow:hidden;border:1px solid var(--gun);border-radius:2px;background:var(--void);max-height:360px;">
+        <img src="Portfolio Image 1.png" alt="Mrutyunjaya Gouda — Cybersecurity Engineer" style="width:100%;height:360px;object-fit:cover;object-position:center 25%;display:block;filter:contrast(1.05) brightness(0.98);transition:transform 0.5s var(--smooth);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(7,9,13,0.92) 40%,rgba(7,9,13,0.98));padding:12px 10px 8px;">
+          <div class="m" style="color:var(--cy);font-weight:700;font-size:11px">FIELD OPERATIVE // MG-001</div>
+          <div class="m" style="color:var(--bone);font-size:11px">MRUTYUNJAYA GOUDA</div>
+          <div class="m" style="color:var(--mut);font-size:10px">HIGH-ALTITUDE TELEMETRY // 3,400M // ACTIVE</div>
+        </div>
+        <div style="position:absolute;top:8px;right:8px;background:rgba(7,9,13,0.85);border:1px solid var(--gr);padding:2px 6px;border-radius:2px;">
+          <span class="m" style="color:var(--gr);font-size:10px">● STATUS: VERIFIED</span>
+        </div>
+      </div>
+      <div class="m" style="margin-top:10px;font-size:11px;color:var(--mut);line-height:1.4">BIOMETRIC IDENTIFIER: MG-SEC-098<br>SECURE ENCLAVE ID: 0x9813-UPES</div>
+    </div>
+
+    <!-- Core Dossier Specs -->
+    <div class="panel clip m" style="font-size:13px;color:var(--bone);white-space:pre-wrap;line-height:1.75">NAME          // MRUTYUNJAYA GOUDA
 ROLE          // CYBERSECURITY ENGINEER
-FOCUS         // OFFENSIVE + DEFENSIVE + CLOUD
-EDUCATION     // B.TECH CSE (CYBERSECURITY &amp; DIGITAL FORENSICS)
+SPECIALTY     // OFFENSIVE + DEFENSIVE + CLOUD
+EDUCATION     // B.TECH CSE (CYBERSECURITY &amp; DF)
 INSTITUTION   // UPES, DEHRADUN
 GRADUATION    // MAY 2027 (EXPECTED)
-STATUS        // ACTIVE</div>
-<div class="panel clip"><p style="margin-top:0">Cybersecurity engineer working across the full security lifecycle, from offensive penetration testing and threat hunting to defensive, zero-trust cloud architecture.</p><p>I close the gap between finding a vulnerability and engineering the fix. I use programming and scripting, AI, and a hacker mindset to build custom DevSecOps and threat-intelligence tools for real enterprise problems.</p>
-<p class="m" style="margin-bottom:0">Learning platforms: TryHackMe, HackTheBox, OverTheWire, BugCrowd, LeetCode, GeeksForGeeks, Cisco NetAcad, IBM SkillsBuild.</p></div></div></section>
+CLEARANCE     // FIELD LEVEL 3
+LOCATION      // DEHRADUN / HYDERABAD, IN
+STATUS        // READY FOR DEPLOYMENT</div>
 
-<section id="arsenal"><h2>THE ARSENAL</h2><p>TOOLS ARE ONLY AS EFFECTIVE AS THE ENGINEER USING THEM.</p><div class="warn"></div>
-<div class="grid" id="mods"></div></section>
+    <!-- Philosophy & Mission Directives -->
+    <div class="panel clip">
+      <div class="m" style="color:var(--cy);margin-bottom:8px">OPERATIONAL PHILOSOPHY // END-TO-END RESILIENCE</div>
+      <p style="margin-top:0">Cybersecurity engineer operating across the full security lifecycle — from adversarial red teaming and threat hunting to defensive, zero-trust cloud architecture.</p>
+      <p>I bridge the gap between identifying attack surfaces and engineering resilient, production-ready defenses. Using systems programming (Rust, C/C++), Python automation, and generative AI to engineer specialized threat intelligence and DevSecOps tools.</p>
+      <p class="m" style="margin-bottom:0"><span class="am">TRAINING HUBS:</span> TryHackMe · HackTheBox · OverTheWire · BugCrowd · LeetCode · Cisco NetAcad · IBM SkillsBuild · ISRO IIRS</p>
+    </div>
+  </div>
+</section>
 
-<section id="ops"><h2>CLASSIFIED OPERATIONS</h2><p>ENGINEERED IN THE SHADOWS. BUILT FOR THE REAL WORLD.</p>
-<div class="panel clip" style="border-color:var(--red);margin-bottom:14px" id="swarm">
-<div class="m">OPERATION ID // OP-001 &nbsp; CLASSIFICATION // PUBLIC RELEASE &nbsp; STATUS // <span class="gr">ACTIVE</span> &nbsp; DOMAIN // THREAT INTELLIGENCE</div>
-<h3 style="font-size:44px;margin:10px 0">SWARMSEC</h3><div class="des" style="font-size:16px">Decentralized Threat Intelligence Network</div>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"><div>
-<p><b>Objective.</b> A peer-to-peer threat intelligence platform with secure IOC distribution, cryptographic data validation, and Sybil attack mitigation.</p>
-<p><b>Engineering focus.</b> A fault-tolerant node architecture meant to prevent malicious data injection and keep shared threat intelligence tamper-evident.</p>
-<p class="m">Project is in active development. The diagram is an illustrative sketch, not a statement of shipped features or guarantees. Full architecture notes are in the repository.</p>
-<a class="btn" href="https://github.com/Mrutyunjaya98Gouda" target="_blank" rel="noopener noreferrer">GITHUB PROFILE ↗</a></div>
-<div><canvas id="swc" width="440" height="260" style="width:100%;background:var(--void);border:1px solid var(--gun)" aria-label="Illustrative peer-to-peer node topology. Select a node to inspect it." role="img"></canvas><div class="m" id="swi" aria-live="polite">Click a node to inspect (illustrative).</div></div></div></div>
-<div class="grid" id="projs"></div></section>
+<div class="section-divider"></div>
 
-<section id="lab"><h2>THREAT SIMULATION LAB</h2><p>OBSERVE THE SYSTEM. UNDERSTAND THE ATTACK SURFACE.</p>
-<p class="m" style="margin-top:-14px">Fully local, deterministic simulation of a fictional network. No real scans or connections are made.</p>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))"><div>
-<canvas id="net" width="520" height="340" aria-label="Simulated network diagram"></canvas>
-<div class="ctl"><button class="btn" id="play">START</button><button class="btn" id="step">STEP</button><button class="btn" id="reset">RESET</button>
-<button class="btn" id="fw" aria-pressed="false">FIREWALL RULE: OFF</button>
-<label class="m">SPEED <select id="spd" style="width:auto;margin:0"><option value="1200">1x</option><option value="600">2x</option><option value="300">4x</option></select></label></div></div>
-<div><div class="panel m" id="tel"></div><pre class="panel m" id="log" aria-live="polite"></pre><div class="panel m" id="insp">Click a node on the diagram to inspect it.</div></div></div></section>
+<!-- Arsenal -->
+<section id="arsenal">
+  <div class="reveal">
+    <h2>THE ARSENAL</h2>
+    <p>TOOLS ARE ONLY AS EFFECTIVE AS THE ENGINEER USING THEM.</p>
+  </div>
+  <div class="warn"></div>
+  <div class="grid stagger" id="mods"></div>
+</section>
 
-<section id="svc"><h2>SERVICE RECORD</h2><p>EMPLOYMENT, EDUCATION, CERTIFICATIONS</p><div class="tl" id="tl"></div></section>
+<div class="section-divider"></div>
 
-<section id="arch"><h2>INTELLIGENCE ARCHIVE</h2><p>RESEARCH NOTES AND WRITEUPS</p>
-<div class="panel clip"><label class="m" for="q">SEARCH ARCHIVE</label><input id="q" placeholder="No records to search yet" disabled>
-<p class="m" style="margin:0">ARCHIVE EMPTY // No articles or research have been published yet. Records will appear here once added to the ARCHIVE array in this file (title, date, category, description, URL). Planned categories: Windows Internals, Memory Security, Threat Detection, Secure Systems Design, Networking, Reverse Engineering.</p></div></section>
+<!-- Operations -->
+<section id="ops">
+  <div class="reveal">
+    <h2>CLASSIFIED OPERATIONS</h2>
+    <p>ENGINEERED IN THE SHADOWS. BUILT FOR THE REAL WORLD.</p>
+  </div>
 
-<section id="contact"><h2>ESTABLISH CONNECTION</h2><p>EVERY SYSTEM HAS AN ENTRY POINT. THIS ONE IS INTENTIONAL.</p>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
-<div class="panel clip"><p class="m">CHANNELS // <span class="gr">OPEN</span></p>
-<p><a href="mailto:gmrityunjaya98@outlook.com">gmrityunjaya98@outlook.com</a></p><p><a href="tel:+918712701982">+91 8712701982</a></p>
-<p><a href="https://github.com/Mrutyunjaya98Gouda" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p>
-<p><a href="https://www.linkedin.com/in/Mrutyunjaya-Gouda" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p>
-<p class="m" style="margin-bottom:0">Resume download: add your PDF URL to the RESUME_URL constant in this file to enable the button.</p><a class="btn" id="resume" href="#contact" hidden>DOWNLOAD RESUME ↓</a></div>
-<form class="panel clip" id="cf"><div class="m">TRANSMISSION // OPENS YOUR EMAIL APP</div>
-<label class="m" for="n">SENDER ID</label><input id="n" required maxlength="80">
-<label class="m" for="e">RETURN CHANNEL</label><input id="e" type="email" required maxlength="120">
-<label class="m" for="t">MESSAGE PAYLOAD</label><textarea id="t" rows="4" required maxlength="1500"></textarea>
-<button class="btn" type="submit">COMPOSE TRANSMISSION ↗</button>
-<p class="m">No server backend is configured, so this composes a standard email in your own mail client. It is not encrypted by this site.</p></form></div></section>
+  <!-- OP-001: SwarmSec -->
+  <div class="panel clip reveal" style="border-color:var(--red);margin-bottom:18px" id="swarm">
+    <div class="m">OPERATION ID // OP-001 &nbsp; CLASSIFICATION // PUBLIC RELEASE &nbsp; STATUS // <span class="gr">ACTIVE</span> &nbsp; DOMAIN // DECENTRALIZED THREAT INTEL</div>
+    <h3 style="font-size:38px;margin:8px 0">SWARMSEC</h3>
+    <div class="des" style="font-size:15px">Decentralized Threat Intelligence &amp; Cryptographic IOC Distribution Network</div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start">
+      <div>
+        <p><b>Objective.</b> A peer-to-peer threat intelligence platform featuring secure IOC distribution, cryptographic data validation, and Sybil attack mitigation.</p>
+        <p><b>Engineering focus.</b> A fault-tolerant node architecture engineered to prevent malicious data injection, verify proof-of-authenticity, and keep shared threat telemetry tamper-evident across trust boundaries.</p>
+        <p class="m">Interactive node mesh active. Click any node on the topology to inspect live connection telemetry.</p>
+        <a class="btn" href="https://github.com/Mrutyunjaya98Gouda/SwarmSec" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
+      </div>
+      <div>
+        <canvas id="swc" width="440" height="260" style="width:100%;background:var(--void);border:1px solid var(--gun)" aria-label="Illustrative peer-to-peer node topology. Select a node to inspect it." role="img"></canvas>
+        <div class="m" id="swi" aria-live="polite">Click a node to inspect (illustrative).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OP-002: CyberEye -->
+  <div class="panel clip reveal" style="border-color:var(--cy);margin-bottom:18px" id="cybereye">
+    <div class="m">OPERATION ID // OP-002 &nbsp; CLASSIFICATION // PUBLIC RELEASE &nbsp; STATUS // <span class="gr">ACTIVE</span> &nbsp; DOMAIN // ATTACK SURFACE INTELLIGENCE &amp; RECON</div>
+    <h3 style="font-size:38px;margin:8px 0">CYBEREYE</h3>
+    <div class="des" style="font-size:15px">Advanced Attack Surface Reconnaissance &amp; Subdomain Enumeration Platform</div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start">
+      <div>
+        <p><b>Objective.</b> An enterprise-grade attack surface reconnaissance platform built for automated perimeter discovery, DNS enumeration, and multi-cloud asset tracking (AWS, Azure, GCP).</p>
+        <p><b>Engineering focus.</b> High-concurrency discovery engines with subdomain takeover heuristics, anomaly detection, real-time graph visualization, and AI-assisted triage to uncover hidden vulnerabilities before adversaries.</p>
+        <p class="m">Radar sweep active. Click any discovered endpoint node to inspect attack surface telemetry.</p>
+        <a class="btn" href="https://github.com/Mrutyunjaya98Gouda/CyberEye" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a>
+      </div>
+      <div>
+        <canvas id="cec" width="440" height="260" style="width:100%;background:var(--void);border:1px solid var(--gun)" aria-label="CyberEye Attack Surface Radar and Subdomain Enumeration Topology" role="img"></canvas>
+        <div class="m" id="cei" aria-live="polite">Radar scanning... Click a discovered target node to inspect.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid stagger" id="projs"></div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Threat Lab -->
+<section id="lab">
+  <div class="reveal">
+    <h2>THREAT SIMULATION LAB</h2>
+    <p>OBSERVE THE SYSTEM. UNDERSTAND THE ATTACK SURFACE.</p>
+  </div>
+  <p class="m" style="margin-top:-14px">Fully local, deterministic simulation of a fictional network. No real scans or connections are made.</p>
+  <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+    <div class="reveal-left">
+      <canvas id="net" width="520" height="340" aria-label="Simulated network diagram"></canvas>
+      <div class="ctl">
+        <button class="btn" id="play">START</button>
+        <button class="btn" id="step">STEP</button>
+        <button class="btn" id="reset">RESET</button>
+        <button class="btn" id="fw" aria-pressed="false">FIREWALL RULE: OFF</button>
+        <label class="m">SPEED <select id="spd" style="width:auto;margin:0"><option value="1200">1x</option><option value="600">2x</option><option value="300">4x</option></select></label>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="panel m" id="tel"></div>
+      <pre class="panel m" id="log" aria-live="polite"></pre>
+      <div class="panel m" id="insp">Click a node on the diagram to inspect it.</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Service Record -->
+<section id="svc">
+  <div class="reveal">
+    <h2>SERVICE RECORD</h2>
+    <p>PROFESSIONAL EMPLOYMENT, LEADERSHIP, ACADEMICS &amp; CERTIFICATIONS</p>
+  </div>
+  <!-- Category Filter Controls -->
+  <div class="ctl" style="margin-bottom:20px" role="tablist" aria-label="Service record filter">
+    <button class="btn svc-tab" data-cat="all" aria-pressed="true">ALL RECORDS</button>
+    <button class="btn svc-tab" data-cat="exp" aria-pressed="false">EXPERIENCE</button>
+    <button class="btn svc-tab" data-cat="por" aria-pressed="false">POSITIONS OF RESPONSIBILITY</button>
+    <button class="btn svc-tab" data-cat="edu" aria-pressed="false">EDUCATION</button>
+    <button class="btn svc-tab" data-cat="cert" aria-pressed="false">CERTIFICATIONS</button>
+  </div>
+  <div id="tl" class="grid stagger" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));align-items:start"></div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Off-Duty Telemetry / Pursuits -->
+<section id="telemetry">
+  <div class="reveal">
+    <h2>OFF-DUTY TELEMETRY // PURSUITS</h2>
+    <p>THE PHYSICAL &amp; COGNITIVE DISCIPLINES BEYOND THE SCREEN</p>
+  </div>
+  <div class="grid stagger" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start">
+    <div class="panel clip">
+      <div class="m"><span class="red">SECTOR 01 //</span> HIGH-VELOCITY RECON</div>
+      <h3 style="font-size:24px;margin:8px 0">TRACK RACING &amp; BIKING</h3>
+      <div class="des" style="font-size:13px">APEX PRECISION &amp; MECHANICAL CONTROL</div>
+      <p>High-speed track riding, throttle modulation, trajectory optimization, and understanding machines at their mechanical limits. Parallels the split-second risk assessment and reflexive precision demanded in active red team operations.</p>
+      <div class="tag">Track Days</div><div class="tag">Superbikes</div><div class="tag">Apex Control</div><div class="tag">Kinematics</div>
+    </div>
+
+    <div class="panel clip">
+      <div class="m"><span class="cy">SECTOR 02 //</span> TACTICAL ADVERSARIAL</div>
+      <h3 style="font-size:24px;margin:8px 0">COMBAT SPORTS</h3>
+      <div class="des" style="font-size:13px">REFLEXIVE DEFENSE &amp; COMBATIVE MENTALITY</div>
+      <p>Martial arts and combat sports training. Developing physical endurance, reading opponent telegraphs under high adrenaline, conditioning reflexive counter-attacks, and maintaining disciplined composure during high-pressure engagements.</p>
+      <div class="tag">Combat Conditioning</div><div class="tag">Sparring</div><div class="tag">Reflexive Defense</div>
+    </div>
+
+    <div class="panel clip">
+      <div class="m"><span class="am">SECTOR 03 //</span> EXPEDITIONS &amp; TERRAIN</div>
+      <h3 style="font-size:24px;margin:8px 0">HIKING, ADVENTURE &amp; TRAVELLING</h3>
+      <div class="des" style="font-size:13px">HIGH-ALTITUDE ASCENTS &amp; WILDERNESS NAVIGATION</div>
+      <p>High-altitude mountain expeditions (Himalayan passes up to 3,400m+), rugged wilderness endurance, route mapping, and exploring remote landscapes across diverse topographies.</p>
+      <div class="tag">Alpine Treks</div><div class="tag">Exploration</div><div class="tag">Wilderness Recon</div>
+    </div>
+
+    <div class="panel clip">
+      <div class="m"><span class="gr">SECTOR 04 //</span> OPTICAL INTELLIGENCE</div>
+      <h3 style="font-size:24px;margin:8px 0">PHOTOGRAPHY</h3>
+      <div class="des" style="font-size:13px">PERSPECTIVE, COMPOSITION &amp; ENVIRONMENTAL CAPTURE</div>
+      <p>Capturing rugged mountain ranges, dynamic landscapes, high-contrast urban architecture, and high-speed motion. Trains an instinct for visual reconnaissance and identifying subtle environmental anomalies.</p>
+      <div class="tag">Mountain Optics</div><div class="tag">Landscape Framing</div><div class="tag">Visual Telemetry</div>
+    </div>
+
+    <div class="panel clip">
+      <div class="m"><span class="cy">SECTOR 05 //</span> PHYSICAL HARDENING</div>
+      <h3 style="font-size:24px;margin:8px 0">WORKOUT &amp; CONDITIONING</h3>
+      <div class="des" style="font-size:13px">FUNCTIONAL STRENGTH &amp; METABOLIC STAMINA</div>
+      <p>Calisthenics, progressive overload, core stability, and functional physical conditioning. The physical hardware must match the resilience, stamina, and focus demanded by deep terminal and reverse engineering sessions.</p>
+      <div class="tag">Functional Strength</div><div class="tag">Endurance</div><div class="tag">Discipline</div>
+    </div>
+
+    <div class="panel clip">
+      <div class="m"><span class="red">SECTOR 06 //</span> CONTINUOUS EVOLUTION</div>
+      <h3 style="font-size:24px;margin:8px 0">CYBERSECURITY &amp; SKILL DEVELOPMENT</h3>
+      <div class="des" style="font-size:13px">PERPETUAL LEARNING &amp; RESEARCH SPRINT</div>
+      <p>Continuous CTF challenges, dissecting new CVEs, prototyping offensive toolchains, participating in security research sprints, and relentlessly expanding low-level systems programming and defensive knowledge.</p>
+      <div class="tag">CTF Labs</div><div class="tag">CVE Analysis</div><div class="tag">Tool Engineering</div><div class="tag">Lifelong Study</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Archive -->
+<section id="arch">
+  <div class="reveal">
+    <h2>INTELLIGENCE ARCHIVE</h2>
+    <p>RESEARCH NOTES AND WRITEUPS</p>
+  </div>
+  <div class="panel clip reveal">
+    <label class="m" for="q">SEARCH ARCHIVE</label>
+    <input id="q" placeholder="No records to search yet" disabled>
+    <p class="m" style="margin:0">ARCHIVE EMPTY // No articles or research have been published yet. Records will appear here once added to the ARCHIVE array in this file (title, date, category, description, URL). Planned categories: Windows Internals, Memory Security, Threat Detection, Secure Systems Design, Networking, Reverse Engineering.</p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="reveal">
+    <h2>ESTABLISH CONNECTION</h2>
+    <p>EVERY SYSTEM HAS AN ENTRY POINT. THIS ONE IS INTENTIONAL.</p>
+  </div>
+  <div class="grid stagger" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+    <div class="panel clip">
+      <p class="m">CHANNELS // <span class="gr">OPEN</span></p>
+      <p><a href="mailto:gmrityunjaya98@outlook.com">gmrityunjaya98@outlook.com</a></p>
+      <p><a href="tel:+918712701982">+91 8712701982</a></p>
+      <p><a href="https://github.com/Mrutyunjaya98Gouda" target="_blank" rel="noopener noreferrer">GitHub ↗</a></p>
+      <p><a href="https://www.linkedin.com/in/Mrutyunjaya-Gouda" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p>
+      <p class="m" style="margin-bottom:0">Resume download: add your PDF URL to the RESUME_URL constant in this file to enable the button.</p>
+      <a class="btn" id="resume" href="#contact" hidden>DOWNLOAD RESUME ↓</a>
+    </div>
+    <form class="panel clip" id="cf">
+      <div class="m">TRANSMISSION // OPENS YOUR EMAIL APP</div>
+      <label class="m" for="n">SENDER ID</label><input id="n" required maxlength="80">
+      <label class="m" for="e">RETURN CHANNEL</label><input id="e" type="email" required maxlength="120">
+      <label class="m" for="t">MESSAGE PAYLOAD</label><textarea id="t" rows="4" required maxlength="1500"></textarea>
+      <button class="btn" type="submit">COMPOSE TRANSMISSION ↗</button>
+      <p class="m">No server backend is configured, so this composes a standard email in your own mail client. It is not encrypted by this site.</p>
+    </form>
+  </div>
+</section>
+
 <footer class="m">MG-001 // FICTIONAL 2097 SETTING, FACTUAL PROFESSIONAL RECORD</footer>
 
 <script>
-const RESUME_URL="";
-const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
-/* DATA from resume */
-const MODS=[
-["SYSTEMS ENGINEERING","C, C++, Rust, Linux / OS internals, Windows OS internals, Shell scripting, Secure coding","Rust USB daemon in Project Aegis; Python sandbox with OS isolation"],
-["OFFENSIVE SECURITY &amp; APPSEC","Vulnerability assessment, Pentesting, OWASP Top 10, Automated recon, Red teaming, Burp Suite, OWASP ZAP, Hydra, Medusa, Nmap","Pen-test roles at Nexus Ocean AI and InLighnX Global"],
-["DEFENSIVE SECURITY","Security monitoring, Log analysis, Alert triage, SAST/DAST signal parsing, Incident response, SIEM correlation, YARA, Wireshark, tcpdump, Security reporting","YARA scanning and audit logging in Project Aegis"],
-["CLOUD &amp; DEVOPS","AWS, Azure, Terraform, Docker, Git, GitHub, Bash, Ollama","Hybrid datacenter zero-trust blueprint at Cisco"],
-["AI &amp; AUTOMATION","Python, SQL, Claude Code, Claude Agent SDK, GitHub Copilot, Cursor, LLM evals, Prompt engineering, Security automation","Custom DevSecOps and threat-intel tooling"],
-["GOVERNANCE &amp; COMPLIANCE","Generative AI security, ISO 27001, NIST CSF, SOC 2, Risk &amp; compliance auditing, NIST SP 800-53","NIST SP 800-53 audit logging in Project Aegis"]];
-$('#mods').innerHTML=MODS.map(m=>`<details class="panel clip"><summary>${m[0]}</summary><div style="margin-top:8px">${m[1].split(', ').map(x=>`<span class="tag">${x}</span>`).join('')}<p class="m"><span class="am">EVIDENCE //</span> ${m[2]}</p></div></details>`).join('');
-const PROJ=[
-["OP-002","PROJECT AEGIS","Zero-Trust USB Security Suite","ENDPOINT SECURITY","Rust, YARA","Built a Rust USB security daemon with device interception, entropy analysis, YARA scanning, and HID spoof detection against BadUSB and ransomware threats. Reported ~12% lower unauthorized USB persistence risk and 18% better endpoint compliance through NIST SP 800-53 audit logging."],
-["OP-003","CONTROLLED-EXECUTION-SANDBOX","Python sandbox for untrusted code","SECURE EXECUTION","Python","Built a 6-layer security pipeline for safely running untrusted code and shell commands. Using OS isolation, AST detection, and security policies, reported a 37% smaller injection attack surface and 23% better execution safety."]];
-$('#projs').innerHTML=PROJ.map(p=>`<article class="panel clip"><div class="m">${p[0]} // PUBLIC RELEASE // ${p[3]}</div><h3 style="font-size:32px;margin:8px 0">${p[1]}</h3><div class="des" style="font-size:15px">${p[2]}</div><span class="tag">${p[4]}</span><p>${p[5]}</p><a class="btn" href="https://github.com/Mrutyunjaya98Gouda" target="_blank" rel="noopener noreferrer">GITHUB PROFILE ↗</a></article>`).join('');
-const SVC=[
-["EXPERIENCE","Cisco","Cybersecurity Intern","June 2026 – August 2026",["Architected a hybrid datacenter security blueprint integrating zero-trust and network segmentation.","Completed advanced Cisco security coursework to build threat models balancing defense-in-depth with operational simplicity.","Delivered implementation blueprints that reduced network complexity by ~22%."]],
-["EXPERIENCE","InLighnX Global Pvt. Ltd.","Offensive Security Intern","November 2025 – February 2026",["Ran penetration tests and red teaming on simulated enterprise environments.","Exploited OWASP Top 10 vulnerabilities with industry tools and custom scripts.","Wrote CVSS-rated reports with reproducible lab workflows, reducing remediation turnaround by ~30%."]],
-["EXPERIENCE","Nexus Ocean AI","Penetration Tester","June 2025 – August 2025",["Tested SQLi, XSS, authentication flaws and misconfigurations across 5+ production systems.","Used Burp Suite, OWASP ZAP, Hydra/Medusa and Nmap.","Delivered CVSS-rated reports with remediation guidance, reducing exploitable vulnerabilities by ~26%."]],
-["POSITION OF RESPONSIBILITY","National Service Scheme (NSS)","Technical Coordinator","August 2023 – May 2026",["Managed and supported 10+ digital literacy and IT awareness programs for local communities."]],
-["EDUCATION","UPES, Dehradun","B.Tech CSE (Cybersecurity and Digital Forensics)","August 2023 – May 2027 (expected)",[]],
-["CERTIFICATIONS","Completed","Ethical Hacking (GUVI) · Linux Unhatched (Cisco Networking Academy) · Level Up Cybersecurity with Generative AI (IBM SkillsBuild) · Mastercard Cybersecurity Job Simulation (Forage) · Remote Sensing &amp; Digital Image Analysis (ISRO)","",[]],
-["CERTIFICATIONS","In progress","TryHackMe Cybersecurity · ISC2 Certified in Cybersecurity (CC) · CompTIA Security+","",[]]];
-$('#tl').innerHTML=SVC.map(s=>`<div class="panel"><div class="m">${s[0]} ${s[3]?'// '+s[3]:''}</div><h3 style="font-size:28px;margin:6px 0">${s[1]}</h3><div class="red">${s[2]}</div>${s[4].length?'<ul>'+s[4].map(x=>`<li>${x}</li>`).join('')+'</ul>':''}</div>`).join('');
-if(RESUME_URL){const r=$('#resume');r.href=RESUME_URL;r.hidden=false;r.setAttribute('download','')}
-$('#cf').onsubmit=e=>{e.preventDefault();const b=encodeURIComponent($('#t').value+'\n\nFrom: '+$('#n').value+' <'+$('#e').value+'>');location.href='mailto:gmrityunjaya98@outlook.com?subject='+encodeURIComponent('Portfolio inquiry from '+$('#n').value)+'&body='+b};
+/* ═══════════════════════════════════════════════
+   CONFIGURATION
+   ═══════════════════════════════════════════════ */
+const RESUME_URL = "https://drive.google.com/file/d/1E5r4kpMKiVfYyCWFpqsWDshVhca3qgYD/view?usp=drive_link";
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const RM = matchMedia('(prefers-reduced-motion:reduce)').matches;
 
-/* BOOT */
-const boot=$('#boot');let seen=false;try{seen=sessionStorage.getItem('b')}catch(e){}
-function endBoot(){boot.remove();try{sessionStorage.setItem('b',1)}catch(e){}}
-if(seen||RM)boot.remove();else{
-const L=["NEURAL INTERFACE // INITIALIZING","","[ OK ] Establishing session","[ OK ] Loading operator identity","[ OK ] Synchronizing intelligence database","[ OK ] Rendering tactical environment","","ACCESS LEVEL: VISITOR","CONNECTION: ESTABLISHED","","WELCOME TO THE UNDERGROUND."];
-let i=0;const iv=setInterval(()=>{$('#bt').textContent+=L[i++]+"\n";if(i>=L.length){clearInterval(iv);setTimeout(()=>boot.isConnected&&endBoot(),500)}},200);
-$('#skip').onclick=()=>{clearInterval(iv);endBoot()};$('#skip').focus()}
+/* ═══════════════════════════════════════════════
+   CUSTOM CURSOR — LAG-FREE HARDWARE ACCELERATED
+   ═══════════════════════════════════════════════ */
+(function() {
+  if (RM || matchMedia('(hover: none)').matches) return;
+  const dot = $('#cursor-dot'), ring = $('#cursor-ring');
+  if (!dot || !ring) return;
+  let curX = -100, curY = -100, ringX = -100, ringY = -100;
+  let active = false;
 
-/* CITY: two layers sharing geometry */
-const cv=$('#cv'),cx=cv.getContext('2d');let W,H,dpr,bld=[],drops=[],drones=[],px=.5,py=.5,mx=-999,my=-999,locked=false,full=false,rad=.25,vis=true,flash=0;
-function rnd(s){return()=>(s=(s*16807)%2147483647)/2147483647}
-function build(){const r=rnd(7);bld=[];for(let l=0;l<3;l++){let x=-20;while(x<W+40){const w=40+r()*70*(1+l*.3),h=H*(.25+r()*.45)*(1-l*.15);bld.push({x,w,h,l,sig:r()<.18,hue:r(),win:r()});x+=w+4}}
-drops=Array.from({length:W<700?120:260},()=>({x:r()*W,y:r()*H,v:.6+r()}));drones=Array.from({length:4},(_,i)=>({x:r()*W,y:H*(.15+r()*.3),v:.2+r()*.3}))}
-function size(){dpr=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);build()}
-function city(c,cyber,t){c.fillStyle='#07090D';c.fillRect(0,0,W,H);
-const g=c.createLinearGradient(0,0,0,H);g.addColorStop(0,cyber?'#05161a':'#10151B');g.addColorStop(1,'#1a0a10');c.fillStyle=g;c.fillRect(0,0,W,H);
-const cen=[];
-bld.forEach(b=>{const o=(px-.5)*(14+b.l*26),x=b.x+o,y=H-b.h,sh=['#141b21','#1a232a','#202A31'][b.l];
-c.fillStyle=cyber?'#031014':sh;c.fillRect(x,y,b.w,b.h);
-if(cyber){c.strokeStyle='rgba(0,229,255,.55)';c.lineWidth=1;c.strokeRect(x+.5,y+.5,b.w,b.h)}
-else{c.fillStyle='rgba(255,51,71,.5)';for(let wy=y+10;wy<H-10;wy+=14)for(let wx=x+6;wx<x+b.w-6;wx+=10)if(((wx*7+wy*13)|0)%9<1+b.win*2)c.fillRect(wx,wy,3,5)}
-if(b.sig&&b.l<2){c.fillStyle=cyber?'rgba(255,179,71,.9)':'rgba(255,51,71,'+(.55+.35*Math.sin(t/300+b.x))+')';c.fillRect(x+4,y+20,b.w*.35,b.h*.2)}
-if(b.l===1)cen.push([x+b.w/2,y+8,b])});
-if(cyber){c.lineWidth=1;cen.forEach((a,i)=>{const n=cen[(i+3)%cen.length];c.strokeStyle='rgba(0,229,255,.35)';c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(n[0],n[1]);c.stroke();const p=(t/1500+i*.13)%1;c.fillStyle='#75FF91';c.fillRect(a[0]+(n[0]-a[0])*p-2,a[1]+(n[1]-a[1])*p-2,4,4);if(a[2].sig){c.strokeStyle='#FF3347';c.beginPath();c.arc(a[0],a[1],12+4*Math.sin(t/200),0,6.3);c.stroke()}});
-c.fillStyle='#FFB347';c.font='11px IBM Plex Mono,monospace';c.fillText('SIMULATED // NODE COMPROMISED',W*.08,H*.12);c.fillText('SIMULATED // TRUST BOUNDARY',W*.55,H*.2)}
-drones.forEach(d=>{const x=d.x,y=d.y;c.fillStyle=cyber?'#00E5FF':'#7E919B';c.fillRect(x,y,10,3);if(cyber){c.strokeStyle='rgba(0,229,255,.3)';c.beginPath();c.moveTo(x+5,y);c.lineTo(x-30,y+90);c.lineTo(x+40,y+90);c.closePath();c.stroke()}})}
-let last=0;function frame(t){requestAnimationFrame(frame);if(!vis)return;const dt=Math.min(50,t-last);last=t;
-drones.forEach(d=>{d.x+=d.v*dt*.06;if(d.x>W+20)d.x=-20});
-cx.save();city(cx,full,t);
-if(!full&&mx>-900){const R=rad*Math.min(W,H)*(W<700?1.1:1);cx.save();cx.beginPath();cx.arc(mx,my,R,0,6.3);cx.clip();city(cx,true,t);cx.restore();cx.strokeStyle='#FF3347';cx.lineWidth=1.5;cx.beginPath();cx.arc(mx,my,R,0,6.3);cx.stroke();cx.beginPath();cx.moveTo(mx-R-8,my);cx.lineTo(mx-R+10,my);cx.moveTo(mx+R-10,my);cx.lineTo(mx+R+8,my);cx.moveTo(mx,my-R-8);cx.lineTo(mx,my-R+10);cx.moveTo(mx,my+R-10);cx.lineTo(mx,my+R+8);cx.stroke()}
-if(!RM){cx.strokeStyle='rgba(170,200,220,.35)';cx.lineWidth=1;cx.beginPath();drops.forEach(d=>{d.y+=d.v*dt*.9;d.x-=dt*.05;if(d.y>H){d.y=-10;d.x=Math.random()*W+40}cx.moveTo(d.x,d.y);cx.lineTo(d.x+2,d.y+12)});cx.stroke();
-if(Math.random()<.0015)flash=1;if(flash>0){cx.fillStyle='rgba(200,220,255,'+flash*.18+')';cx.fillRect(0,0,W,H);flash-=dt/250}}
-cx.restore()}
-size();addEventListener('resize',size);requestAnimationFrame(frame);
-document.addEventListener('visibilitychange',()=>vis=!document.hidden);
-function pt(e){if(locked)return;const r=cv.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;px=mx/W;py=my/H}
-$('#hero').addEventListener('pointermove',pt);$('#hero').addEventListener('pointerdown',e=>{if(e.target.closest('#hud>*:not(.ctl.panel)')&&e.target.closest('a,button,input,label'))return;pt(e)});
-cv.addEventListener('click',()=>{locked=!locked;lk()});
-function lk(){$('#lock').setAttribute('aria-pressed',locked);$('#lock').textContent=locked?'UNLOCK SCANNER':'LOCK SCANNER'}
-$('#lock').onclick=()=>{locked=!locked;lk()};
-function mode(f){full=f;$('#mCyber').setAttribute('aria-pressed',f);$('#mReal').setAttribute('aria-pressed',!f)}
-$('#mReal').onclick=()=>mode(false);$('#mCyber').onclick=()=>mode(true);
-$('#rad').oninput=e=>{rad=e.target.value/100;$('#radv').textContent=e.target.value+'%'};
-addEventListener('keydown',e=>{if(/INPUT|TEXTAREA|SELECT/.test(e.target.tagName))return;if(e.key==='s'||e.key==='S'){if(mx<-900){mx=W/2;my=H/2}else{mx=-999;locked=false;lk()}}});
+  document.addEventListener('mousemove', e => {
+    curX = e.clientX;
+    curY = e.clientY;
+    if (!active) {
+      active = true;
+      ringX = curX;
+      ringY = curY;
+      ring.style.opacity = '1';
+      dot.style.opacity = '1';
+    }
+    dot.style.transform = `translate3d(${curX - 2.5}px, ${curY - 2.5}px, 0)`;
+  }, { passive: true });
 
-/* SWARMSEC illustrative topology */
-(function(){const c=$('#swc'),x=c.getContext('2d'),N=[];for(let i=0;i<8;i++){const a=i/8*6.283;N.push({x:220+Math.cos(a)*(i%2?85:150),y:130+Math.sin(a)*(i%2?55:100)})}
-let sel=-1,tm=0;function d(){x.clearRect(0,0,440,260);x.strokeStyle='#202A31';N.forEach((a,i)=>[1,3].forEach(k=>{const b=N[(i+k)%8];x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}));
-if(sel>=0){x.strokeStyle='#00E5FF';N.forEach((b,i)=>{if(i!==sel){x.beginPath();x.moveTo(N[sel].x,N[sel].y);x.lineTo(b.x,b.y);x.stroke()}})}
-N.forEach((n,i)=>{x.fillStyle=i===sel?'#00E5FF':'#FF3347';x.fillRect(n.x-7,n.y-7,14,14)});x.fillStyle='#7E919B';x.font='11px IBM Plex Mono,monospace';x.fillText('ILLUSTRATIVE PEER-TO-PEER MESH',8,252)}
-d();c.onclick=e=>{const r=c.getBoundingClientRect(),px=(e.clientX-r.left)*440/r.width,py=(e.clientY-r.top)*260/r.height;sel=N.findIndex(n=>Math.abs(n.x-px)<16&&Math.abs(n.y-py)<16);$('#swi').textContent=sel>=0?'PEER '+(sel+1)+' // illustrative peer that would share and validate IOCs with other peers.':'Click a node to inspect (illustrative).';d()}})();
+  document.addEventListener('mouseleave', () => {
+    ring.style.opacity = '0';
+    dot.style.opacity = '0';
+    active = false;
+  });
 
-/* THREAT LAB: deterministic event engine */
-(function(){const c=$('#net'),x=c.getContext('2d');
-const NODES=[["WS-1",60,60,'ws','USER'],["WS-2",60,170,'ws','USER'],["WS-3",60,280,'ws','USER'],["FW",190,170,'fw','EDGE'],["APP-1",320,90,'app','DMZ'],["APP-2",320,250,'app','DMZ'],["DB-1",460,170,'db','CORE'],["SIEM",190,40,'siem','MGMT']].map((n,i)=>({id:i,name:n[0],x:n[1],y:n[2],type:n[3],zone:n[4]}));
-const LINKS=[[0,3],[1,3],[2,3],[3,4],[3,5],[4,6],[5,6],[7,3]];
-/* Fixed script; step(i) transitions. Firewall rule ON blocks events flagged b:1 */
-const EV=[
-{m:"WS-2 failed login x5 (simulated brute force)",n:1,a:1},
-{m:"WS-2 outbound connection to unknown host",n:1,a:1,b:1},
-{m:"WS-2 probes APP-2 on port 8080",n:5,a:1,b:1},
-{m:"SIEM correlates events, alert raised",n:7,a:1},
-{m:"APP-2 policy violation: unexpected process",n:5,a:1,b:1},
-{m:"SIEM recommends isolating WS-2",n:7,a:0},
-{m:"WS-2 isolated from network",n:1,iso:1},
-{m:"DB-1 connection attempt from WS-2 denied",n:6,a:0}];
-let st,timer=null,fw=false;
-function init(){st={i:0,alerts:0,iso:new Set(),log:[],blocked:0,hit:new Set()}}
-function step(){if(st.i>=EV.length){pause();return}const e=EV[st.i++];let txt=e.m;
-if(fw&&e.b){st.blocked++;txt+=" // BLOCKED by firewall rule"}else{if(e.a)st.alerts++;if(e.iso)st.iso.add(e.n);st.hit.add(e.n)}
-if(fw&&e.a&&e.b)st.alerts++;
-st.log.push(`[${String(st.i).padStart(2,'0')}] ${txt}`);draw()}
-function pause(){clearInterval(timer);timer=null;$('#play').textContent=st.i>=EV.length?'DONE':'START'}
-function draw(){x.clearRect(0,0,520,340);x.lineWidth=1;LINKS.forEach(l=>{const a=NODES[l[0]],b=NODES[l[1]];x.strokeStyle=(st.iso.has(l[0])||st.iso.has(l[1]))?'#FF3347':'#202A31';x.setLineDash(st.iso.has(l[0])?[4,4]:[]);x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()});x.setLineDash([]);
-NODES.forEach(n=>{const col=st.iso.has(n.id)?'#FF3347':st.hit.has(n.id)?'#FFB347':n.type==='siem'?'#75FF91':'#00E5FF';x.strokeStyle=col;x.fillStyle='#07090D';x.lineWidth=2;x.fillRect(n.x-24,n.y-14,48,28);x.strokeRect(n.x-24,n.y-14,48,28);x.fillStyle='#E7E9E4';x.font='11px IBM Plex Mono,monospace';x.textAlign='center';x.fillText(n.name,n.x,n.y+4)});x.textAlign='left';x.fillStyle='#7E919B';x.fillText('FICTIONAL NETWORK // SIMULATED',8,334);
-$('#tel').textContent=`NETWORK STATUS      // SIMULATED\nACTIVE HOSTS        // ${String(8-st.iso.size).padStart(2,'0')}\nSECURITY ALERTS     // ${String(st.alerts).padStart(2,'0')}\nISOLATED NODES      // ${String(st.iso.size).padStart(2,'0')}\nBLOCKED BY RULE     // ${String(st.blocked).padStart(2,'0')}\nFIREWALL RULE       // ${fw?'ON':'OFF'}\nEVENT               // ${st.i}/${EV.length}`;
-const L=$('#log');L.textContent=st.log.join('\n')||'Event log empty. Press START or STEP.';L.scrollTop=1e5}
-$('#step').onclick=()=>{pause();step()};
-$('#play').onclick=()=>{if(timer){pause();return}if(st.i>=EV.length)return;$('#play').textContent='PAUSE';timer=setInterval(step,+$('#spd').value)};
-$('#spd').onchange=()=>{if(timer){clearInterval(timer);timer=setInterval(step,+$('#spd').value)}};
-$('#reset').onclick=()=>{pause();init();draw()};
-$('#fw').onclick=e=>{fw=!fw;e.target.setAttribute('aria-pressed',fw);e.target.textContent='FIREWALL RULE: '+(fw?'ON':'OFF');pause();init();draw()};
-c.onclick=e=>{const r=c.getBoundingClientRect(),px=(e.clientX-r.left)*520/r.width,py=(e.clientY-r.top)*340/r.height;const n=NODES.find(n=>Math.abs(n.x-px)<26&&Math.abs(n.y-py)<16);if(n)$('#insp').textContent=`NODE ${n.name} // TYPE ${n.type.toUpperCase()} // ZONE ${n.zone} // STATE ${st.iso.has(n.id)?'ISOLATED':st.hit.has(n.id)?'AFFECTED':'NORMAL'}`};
-init();draw()})();
-</script></body></html>
+  /* Smooth spring halo for ring */
+  function followRing() {
+    if (active) {
+      ringX += (curX - ringX) * 0.22;
+      ringY += (curY - ringY) * 0.22;
+      ring.style.transform = `translate3d(${ringX - 16}px, ${ringY - 16}px, 0)`;
+    }
+    requestAnimationFrame(followRing);
+  }
+  requestAnimationFrame(followRing);
+
+  /* Hover detection on interactive elements */
+  document.addEventListener('mouseover', e => {
+    const hit = e.target.closest('a, button, [role="button"], input, textarea, select, summary, canvas, .panel, .tag');
+    ring.classList.toggle('hover', !!hit);
+    dot.classList.toggle('hover', !!hit);
+  });
+
+  document.addEventListener('mousedown', () => ring.classList.add('clicking'));
+  document.addEventListener('mouseup', () => ring.classList.remove('clicking'));
+})();
+
+/* ═══════════════════════════════════════════════
+   DATA
+   ═══════════════════════════════════════════════ */
+const MODS = [
+  ["SYSTEMS ENGINEERING","C, C++, Rust, Linux / OS internals, Windows OS internals, Shell scripting, Secure coding","Rust USB daemon in Project Aegis; Python sandbox with OS isolation"],
+  ["OFFENSIVE SECURITY &amp; APPSEC","Vulnerability assessment, Pentesting, OWASP Top 10, Automated recon, Red teaming, Burp Suite, OWASP ZAP, Hydra, Medusa, Nmap","Pen-test roles at Nexus Ocean AI and InLighnX Global"],
+  ["DEFENSIVE SECURITY","Security monitoring, Log analysis, Alert triage, SAST/DAST signal parsing, Incident response, SIEM correlation, YARA, Wireshark, tcpdump, Security reporting","YARA scanning and audit logging in Project Aegis"],
+  ["CLOUD &amp; DEVOPS","AWS, Azure, Terraform, Docker, Git, GitHub, Bash, Ollama","Hybrid datacenter zero-trust blueprint at Cisco"],
+  ["AI &amp; AUTOMATION","Python, SQL, Claude Code, Claude Agent SDK, GitHub Copilot, Cursor, LLM evals, Prompt engineering, Security automation","Custom DevSecOps and threat-intel tooling"],
+  ["GOVERNANCE &amp; COMPLIANCE","Generative AI security, ISO 27001, NIST CSF, SOC 2, Risk &amp; compliance auditing, NIST SP 800-53","NIST SP 800-53 audit logging in Project Aegis"]
+];
+
+const PROJ = [
+  ["OP-003","PROJECT AEGIS","Zero-Trust USB Security Suite","ENDPOINT SECURITY","Rust, YARA","Built a Rust USB security daemon with device interception, entropy analysis, YARA scanning, and HID spoof detection against BadUSB and ransomware threats. Reported ~12% lower unauthorized USB persistence risk and 18% better endpoint compliance through NIST SP 800-53 audit logging.","https://github.com/Mrutyunjaya98Gouda/Project-Aegis"],
+  ["OP-004","CONTROLLED-EXECUTION-SANDBOX","Python sandbox for untrusted code","SECURE EXECUTION","Python, AST, OS Isolation","Built a 6-layer security pipeline for safely running untrusted code and shell commands. Using OS isolation, AST detection, and security policies, reported a 37% smaller injection attack surface and 23% better execution safety.","https://github.com/Mrutyunjaya98Gouda/Controlled-Execution-Sandbox"],
+  ["OP-005","TAMPER-EVIDENT LOGGING SYSTEM","Cryptographic Audit Trail Engine","DATA INTEGRITY","Python, Cryptography, SHA-256","Engineered an immutable, tamper-evident audit logging engine using cryptographic hash-chaining and digital signatures to guarantee non-repudiation and forensic auditability.","https://github.com/Mrutyunjaya98Gouda/Tamper-Evident-Logging-System"],
+  ["OP-006","SECURITY SYSTEMS ARCHITECTURE","Enterprise Defense &amp; Segmentation Blueprints","INFRASTRUCTURE","Network Security, Cisco, Zero-Trust","Enterprise network defense models featuring micro-segmentation, perimeter hardening, and zero-trust verification gateways.","https://github.com/Mrutyunjaya98Gouda/Security-Systems"]
+];
+
+const SVC = [
+  { cat: "exp", catLabel: "EXPERIENCE", title: "Marma Security", role: "Security Engineer", period: "October 2026 – Current", bullets: ["Architecting and deploying resilient system security frameworks, hardening Windows OS internals to mitigate advanced persistent threats (APTs) and unauthorized lateral movement.", "Engineering custom, enterprise-grade security tooling to automate endpoint telemetry analysis, reducing incident triage time and enhancing the overall defense-in-depth posture.", "Designing comprehensive security architectures that integrate kernel-level monitoring and zero-trust principles to actively reduce the attack surface across production environments."] },
+  { cat: "exp", catLabel: "EXPERIENCE", title: "Cisco", role: "Cybersecurity Intern", period: "June 2026 – August 2026", bullets: ["Architected a hybrid datacenter security blueprint integrating zero-trust and network segmentation.", "Completed advanced Cisco security coursework to build threat models balancing defense-in-depth with operational simplicity.", "Delivered implementation blueprints that reduced network complexity by ~22%."] },
+  { cat: "exp", catLabel: "EXPERIENCE", title: "UPES HILL", role: "Field Researcher", period: "May 2026 – July 2026", bullets: ["Researched communication and digital connectivity challenges in remote Himalayan communities, analyzing the role of network access in education, healthcare, and socio-economic development.", "Examined infrastructure constraints impacting internet and telecommunications availability in geographically challenging regions. ", "Developed systems-thinking and analytical skills by studying the intersection of connectivity, resilience, and sustainable development."] },
+  { cat: "exp", catLabel: "EXPERIENCE", title: "InLighnX Global Pvt. Ltd.", role: "Offensive Security Intern", period: "November 2025 – February 2026", bullets: ["Ran penetration tests and red teaming on simulated enterprise environments.", "Exploited OWASP Top 10 vulnerabilities with industry tools and custom scripts.", "Wrote CVSS-rated reports with reproducible lab workflows, reducing remediation turnaround by ~30%."] },
+  { cat: "exp", catLabel: "EXPERIENCE", title: "Nexus Ocean AI", role: "Penetration Tester", period: "June 2025 – September 2025", bullets: ["Tested SQLi, XSS, authentication flaws and misconfigurations across 5+ production systems.", "Used Burp Suite, OWASP ZAP, Hydra/Medusa and Nmap.", "Delivered CVSS-rated reports with remediation guidance, reducing exploitable vulnerabilities by ~26%."] },
+  { cat: "exp", catLabel: "EXPERIENCE", title: "Inland Charitable Trust", role: "Network Consultant", period: "June 2024 – August 2024", bullets: ["Promoted to Intern Lead Manager", "Conducted 50+ field interviews on technology usage, network access & digital literacy in rural communities.", "Identified 3 major adoption barriers & generated actionable insights for digital inclusion programs.", "Improved outreach effectiveness by ~40% through program redesign & targeted communication."] },
+  { cat: "por", catLabel: "POSITION OF RESPONSIBILITY", title: "National Service Scheme (NSS)", role: "Technical Coordinator", period: "August 2023 – May 2026", bullets: ["Managed and supported 10+ digital literacy and IT awareness programs for local communities.", "Coordinated technical systems and outreach infrastructure across volunteer student cohorts."] },
+  { cat: "por", catLabel: "POSITION OF RESPONSIBILITY", title: "Pratibimb - The Photography Club of UPES", role: "Lead Photographer & Editor", period: "August 2023 – May 2026", bullets: ["Directed photography for 15+ university events, delivering curated visual content for publications & social media.", "Mentored juniors to enhance club output quality, achieving ~35% improvement in overall performance."] },
+  { cat: "edu", catLabel: "EDUCATION", title: "UPES, Dehradun", role: "B.Tech CSE (Cybersecurity &amp; Digital Forensics)", period: "August 2023 – May 2027 (Expected)", bullets: ["Specialization in Offensive Security, Digital Forensics, and Threat Architecture.", "Core studies: Cryptography, Systems Security, Network Defense, Reverse Engineering, OS Internals."] },
+  { cat: "cert", catLabel: "CERTIFICATIONS", title: "Industry Certifications &amp; Accreditations", role: "Completed &amp; Verified", period: "Verified", bullets: ["Remote Sensing &amp; Digital Image Analysis — ISRO (Indian Space Research Organisation)", "Ethical Hacking — GUVI Geek Networks", "Linux Unhatched — Cisco Networking Academy", "Level Up Cybersecurity with Generative AI — IBM SkillsBuild", "Mastercard Cybersecurity Job Simulation — Forage"] },
+  { cat: "cert", catLabel: "CERTIFICATIONS", title: "In-Progress Credentials", role: "Active Verification", period: "Target 2026-2027", bullets: ["CompTIA Security+ (SY0-701)", "ISC2 Certified in Cybersecurity (CC)", "TryHackMe — Red Teamer &amp; Cyber Defense Paths"] }
+];
+
+/* ═══════════════════════════════════════════════
+   RENDER DATA
+   ═══════════════════════════════════════════════ */
+$('#mods').innerHTML = MODS.map(m =>
+  `<details class="panel clip"><summary>${m[0]}</summary><div style="margin-top:8px">${m[1].split(', ').map(x => `<span class="tag">${x}</span>`).join('')}<p class="m"><span class="am">EVIDENCE //</span> ${m[2]}</p></div></details>`
+).join('');
+
+$('#projs').innerHTML = PROJ.map(p =>
+  `<article class="panel clip"><div class="m">${p[0]} // PUBLIC RELEASE // ${p[3]}</div><h3 style="font-size:30px;margin:8px 0">${p[1]}</h3><div class="des" style="font-size:15px">${p[2]}</div><span class="tag">${p[4]}</span><p>${p[5]}</p><a class="btn" href="${p[6]}" target="_blank" rel="noopener noreferrer">VIEW REPOSITORY ↗</a></article>`
+).join('');
+
+function renderSVC(filterCat = 'all') {
+  const filtered = filterCat === 'all' ? SVC : SVC.filter(s => s.cat === filterCat);
+  $('#tl').innerHTML = filtered.map(s => `
+    <div class="panel clip">
+      <div class="m"><span class="${s.cat === 'exp' ? 'red' : s.cat === 'por' ? 'am' : s.cat === 'edu' ? 'cy' : 'gr'}">${s.catLabel}</span> // ${s.period}</div>
+      <h3 style="font-size:24px;margin:6px 0">${s.title}</h3>
+      <div class="red" style="font-weight:700;font-size:14px;margin-bottom:8px">${s.role}</div>
+      ${s.bullets.length ? '<ul style="margin:8px 0 0;padding-left:18px">' + s.bullets.map(b => `<li style="margin-bottom:4px">${b}</li>`).join('') + '</ul>' : ''}
+    </div>
+  `).join('');
+}
+renderSVC();
+
+$$('.svc-tab').forEach(btn => {
+  btn.onclick = () => {
+    $$('.svc-tab').forEach(b => b.setAttribute('aria-pressed', 'false'));
+    btn.setAttribute('aria-pressed', 'true');
+    renderSVC(btn.dataset.cat);
+  };
+});
+
+if (RESUME_URL) {
+  const r = $('#resume');
+  if (r) {
+    r.href = RESUME_URL;
+    r.hidden = false;
+    r.target = "_blank";
+    r.rel = "noopener noreferrer";
+  }
+}
+
+$('#cf').onsubmit = e => {
+  e.preventDefault();
+  const b = encodeURIComponent($('#t').value + '\n\nFrom: ' + $('#n').value + ' <' + $('#e').value + '>');
+  location.href = 'mailto:gmrityunjaya98@outlook.com?subject=' + encodeURIComponent('Portfolio inquiry from ' + $('#n').value) + '&body=' + b;
+};
+
+/* ═══════════════════════════════════════════════
+   BOOT SEQUENCE
+   ═══════════════════════════════════════════════ */
+const boot = $('#boot');
+let seen = false;
+try { seen = sessionStorage.getItem('b'); } catch (e) {}
+
+function endBoot() {
+  boot.classList.add('boot-fade');
+  setTimeout(() => {
+    boot.remove();
+    try { sessionStorage.setItem('b', 1); } catch (e) {}
+  }, 800);
+}
+
+if (seen || RM) {
+  boot.remove();
+} else {
+  const L = [
+    "NEURAL INTERFACE // INITIALIZING", "",
+    "[ OK ] Establishing session",
+    "[ OK ] Loading operator identity",
+    "[ OK ] Synchronizing intelligence database",
+    "[ OK ] Constructing 3D city environment",
+    "[ OK ] Deploying surveillance drones",
+    "[ OK ] Calibrating threat sensors",
+    "[ OK ] Rendering tactical environment", "",
+    "ACCESS LEVEL: VISITOR",
+    "CONNECTION: ESTABLISHED", "",
+    "WELCOME TO THE UNDERGROUND."
+  ];
+  let i = 0;
+  const pf = $('#pf');
+  const iv = setInterval(() => {
+    $('#bt').textContent += L[i++] + "\n";
+    if (pf) pf.style.width = (i / L.length * 100) + '%';
+    if (i >= L.length) {
+      clearInterval(iv);
+      setTimeout(() => boot.isConnected && endBoot(), 500);
+    }
+  }, 160);
+  $('#skip').onclick = () => { clearInterval(iv); endBoot(); };
+  $('#skip').focus();
+}
+
+/* ═══════════════════════════════════════════════
+   NAV SCROLL STATE
+   ═══════════════════════════════════════════════ */
+let lastScroll = 0;
+addEventListener('scroll', () => {
+  const y = window.scrollY;
+  $('nav').classList.toggle('scrolled', y > 80);
+  lastScroll = y;
+}, { passive: true });
+
+/* ═══════════════════════════════════════════════
+   SCROLL REVEAL — APPLE-STYLE INTERSECTION
+   ═══════════════════════════════════════════════ */
+if (!RM) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+
+  $$('.reveal, .reveal-left, .stagger, .tl').forEach(el => revealObserver.observe(el));
+}
+
+/* ═══════════════════════════════════════════════
+   3D ISOMETRIC MEGACITY
+   ═══════════════════════════════════════════════ */
+const cv = $('#cv'), cx = cv.getContext('2d');
+let W, H, dpr, buildings = [], drops = [], drones = [], vehicles = [], skyCars = [];
+let satellites = [], holograms = [], cranes = [], billboards = [];
+let px = 0.5, py = 0.5, mx = -999, my = -999;
+let locked = false, full = false, rad = 0.25, vis = true, flash = 0;
+/* Smooth parallax with spring interpolation */
+let smoothPx = 0.5, smoothPy = 0.5;
+
+function rnd(s) { return () => (s = (s * 16807) % 2147483647) / 2147483647; }
+
+/* ── Build the 3D megacity geometry ── */
+function buildCity() {
+  const r = rnd(42);
+  buildings = [];
+
+  const gridCols = Math.ceil(W / 42) + 10;
+  const gridRows = 7;
+
+  for (let row = 0; row < gridRows; row++) {
+    for (let col = 0; col < gridCols; col++) {
+      /* MegaTowers: soaring iconic skyscrapers in rows 3-5 */
+      const isMegaTower = (row >= 3 && row <= 5) && (r() < 0.05);
+      const isScraper = !isMegaTower && (r() < 0.09);
+      const isTower = !isMegaTower && !isScraper && (r() < 0.14);
+      const bw = isMegaTower ? 34 + r() * 24 : isScraper ? 18 + r() * 22 : 20 + r() * 30 * (1 + row * 0.05);
+      const maxH = isMegaTower ? Math.min(H * 0.85, 560) + r() * 90 : isScraper ? 280 + r() * 180 : isTower ? 180 + r() * 120 : 35 + r() * 130;
+      const bh = maxH * (1 - row * 0.05);
+      const bd = isMegaTower ? 20 + r() * 16 : 14 + r() * 18;
+
+      const gx = col * 42 - 120 + (row % 2) * 21;
+      const gy = H - 45 - row * 32 + r() * 6;
+
+      const hasAntenna = r() < 0.2 || isScraper || isMegaTower;
+      const hasSign = r() < 0.16 || isMegaTower;
+      const hasCrane = (isScraper || isMegaTower) && r() < 0.35;
+      const hasSpire = (isScraper || isMegaTower) && r() < 0.45;
+      const signHue = r();
+      const windowDensity = 0.25 + r() * 0.55;
+      const windowColor = r() < 0.4 ? 0 : r() < 0.7 ? 1 : 2;
+
+      buildings.push({
+        x: gx, y: gy, w: bw, h: bh, d: bd,
+        row, isMegaTower, isScraper, isTower, hasAntenna, hasSign, hasCrane, hasSpire,
+        signHue, windowDensity, windowColor,
+        pulseOffset: r() * Math.PI * 2,
+        flickerRate: 0.4 + r() * 2.2
+      });
+    }
+  }
+
+  buildings.sort((a, b) => a.row - b.row);
+
+  /* Rain — lightweight and sleek */
+  drops = Array.from({ length: W < 700 ? 55 : 95 }, () => ({
+    x: r() * (W + 300) - 150,
+    y: r() * H,
+    v: 2 + r() * 3,
+    len: 10 + r() * 20,
+    a: 0.08 + r() * 0.2
+  }));
+
+  /* Surveillance drones */
+  drones = Array.from({ length: 12 }, () => ({
+    x: r() * W,
+    y: H * (0.05 + r() * 0.42),
+    v: 0.12 + r() * 0.5,
+    dir: r() < 0.5 ? 1 : -1,
+    size: 5 + r() * 10,
+    blinkPhase: r() * Math.PI * 2,
+    searchAngle: r() * Math.PI * 2
+  }));
+
+  /* Flying skycars (Spinners) in sky transit lanes */
+  skyCars = Array.from({ length: 9 }, () => ({
+    x: r() * (W + 200) - 100,
+    y: H * (0.16 + r() * 0.42),
+    v: 0.7 + r() * 1.5,
+    dir: r() < 0.5 ? 1 : -1,
+    color: ['#00E5FF', '#FFB347', '#FF3347', '#75FF91'][Math.floor(r() * 4)],
+    trailLen: 22 + r() * 28,
+    altPhase: r() * Math.PI * 2
+  }));
+
+  /* Ground vehicles */
+  vehicles = Array.from({ length: 15 }, () => ({
+    x: r() * W,
+    y: H - 15 - r() * 35,
+    v: 0.25 + r() * 1.0,
+    dir: r() < 0.5 ? 1 : -1,
+    color: ['#FF3347', '#00E5FF', '#FFB347', '#75FF91'][Math.floor(r() * 4)],
+    trail: r() * 10 + 5
+  }));
+
+  /* Satellites in upper stratosphere */
+  satellites = Array.from({ length: 5 }, () => ({
+    x: r() * W,
+    y: r() * H * 0.15 + 18,
+    v: 0.05 + r() * 0.15,
+    dir: r() < 0.5 ? 1 : -1,
+    phase: r() * Math.PI * 2,
+    size: 3 + r() * 4
+  }));
+
+  /* Holographic billboards on skyscrapers */
+  holograms = buildings
+    .filter(b => b.isMegaTower || b.isScraper || (b.isTower && b.row < 3))
+    .slice(0, 8)
+    .map(b => ({
+      bx: b.x, by: b.y, bw: b.w, bh: b.h, row: b.row,
+      text: ['SECURE', 'DEFEND', 'ENCRYPT', 'MONITOR', 'BREACH', 'SHIELD', 'ZERO-TRUST', 'SENTINEL'][Math.floor(r() * 8)],
+      color: r() < 0.5 ? 0 : 1,
+      phase: r() * Math.PI * 2
+    }));
+}
+
+function size() {
+  dpr = Math.min(devicePixelRatio || 1, 2);
+  W = cv.clientWidth;
+  H = cv.clientHeight;
+  cv.width = W * dpr;
+  cv.height = H * dpr;
+  cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  buildCity();
+}
+
+/* ── Draw single 3D building ── */
+function drawBuilding(c, b, cyber, t, plx) {
+  const x = b.x + plx * (1 + b.row * 0.5);
+  const y = b.y;
+  const w = b.w;
+  const h = b.h;
+  const d = b.d;
+  const topY = y - h;
+  const dx = d * 0.55;
+  const dy = d * 0.32;
+
+  if (cyber) {
+    /* ── CYBER MODE ── */
+    /* Right face */
+    c.fillStyle = 'rgba(0, 25, 35, 0.85)';
+    c.beginPath();
+    c.moveTo(x + w, topY); c.lineTo(x + w + dx, topY - dy);
+    c.lineTo(x + w + dx, y - dy); c.lineTo(x + w, y);
+    c.closePath(); c.fill();
+    c.strokeStyle = `rgba(0, 229, 255, ${0.3 + 0.15 * Math.sin(t / 600 + b.pulseOffset)})`;
+    c.lineWidth = 0.5; c.stroke();
+
+    /* Top face */
+    c.fillStyle = 'rgba(0, 45, 55, 0.65)';
+    c.beginPath();
+    c.moveTo(x, topY); c.lineTo(x + dx, topY - dy);
+    c.lineTo(x + w + dx, topY - dy); c.lineTo(x + w, topY);
+    c.closePath(); c.fill();
+    c.strokeStyle = 'rgba(0, 229, 255, 0.45)'; c.stroke();
+
+    /* Front face */
+    c.fillStyle = 'rgba(0, 14, 20, 0.92)';
+    c.fillRect(x, topY, w, h);
+    c.strokeStyle = `rgba(0, 229, 255, ${0.45 + 0.15 * Math.sin(t / 400 + b.pulseOffset)})`;
+    c.lineWidth = 0.7; c.strokeRect(x + 0.5, topY + 0.5, w, h);
+
+    /* Horizontal scan lines */
+    c.strokeStyle = `rgba(0, 229, 255, ${0.08 + 0.05 * Math.sin(t / 500 + b.pulseOffset)})`;
+    c.lineWidth = 0.3;
+    for (let fy = topY + 4; fy < y - 4; fy += 8) {
+      c.beginPath(); c.moveTo(x + 1, fy); c.lineTo(x + w - 1, fy); c.stroke();
+    }
+
+    /* Cyber windows — animated data nodes */
+    for (let wy = topY + 6; wy < y - 6; wy += 8) {
+      for (let wx = x + 3; wx < x + w - 3; wx += 6) {
+        if (Math.sin(wx * 3.7 + wy * 2.3 + b.pulseOffset) > 0.25) {
+          const pulse = 0.35 + 0.45 * Math.sin(t / (350 * b.flickerRate) + wx * 0.08 + wy * 0.04);
+          c.fillStyle = `rgba(0, 229, 255, ${pulse * b.windowDensity})`;
+          c.fillRect(wx, wy, 2.5, 3.5);
+        }
+      }
+    }
+
+    /* Vertical data streams on scrapers */
+    if (b.isScraper) {
+      const streamX = x + w * 0.3;
+      const streamH = h * 0.6;
+      const streamY = topY + ((t / 500 + b.pulseOffset * 100) % streamH);
+      c.fillStyle = 'rgba(0, 229, 255, 0.3)';
+      for (let sy = 0; sy < 5; sy++) {
+        const yy = streamY + sy * 8;
+        if (yy > topY && yy < y) c.fillRect(streamX, yy, 1.5, 4);
+      }
+    }
+
+  } else {
+    /* ── REALITY MODE ── */
+    /* Right face */
+    const rGrad = c.createLinearGradient(x + w, topY, x + w + dx, y);
+    rGrad.addColorStop(0, '#1a2128'); rGrad.addColorStop(1, '#0d1216');
+    c.fillStyle = rGrad;
+    c.beginPath();
+    c.moveTo(x + w, topY); c.lineTo(x + w + dx, topY - dy);
+    c.lineTo(x + w + dx, y - dy); c.lineTo(x + w, y);
+    c.closePath(); c.fill();
+
+    /* Top face */
+    c.fillStyle = b.isScraper ? '#2a3540' : '#232c34';
+    c.beginPath();
+    c.moveTo(x, topY); c.lineTo(x + dx, topY - dy);
+    c.lineTo(x + w + dx, topY - dy); c.lineTo(x + w, topY);
+    c.closePath(); c.fill();
+
+    /* Top face accent for scrapers */
+    if (b.isScraper) {
+      c.fillStyle = 'rgba(255, 51, 71, 0.08)';
+      c.fill();
+    }
+
+    /* Front face */
+    const fGrad = c.createLinearGradient(x, topY, x, y);
+    fGrad.addColorStop(0, b.isScraper ? '#1e2830' : '#1a222a');
+    fGrad.addColorStop(1, '#12181e');
+    c.fillStyle = fGrad;
+    c.fillRect(x, topY, w, h);
+
+    /* Subtle edge highlight */
+    c.strokeStyle = 'rgba(255,255,255,0.03)';
+    c.lineWidth = 0.5;
+    c.beginPath(); c.moveTo(x, topY); c.lineTo(x, y); c.stroke();
+
+    /* Windows */
+    const winSpacingX = b.isScraper ? 5 : 7;
+    const winSpacingY = b.isScraper ? 8 : 10;
+    for (let wy = topY + 6; wy < y - 6; wy += winSpacingY) {
+      for (let wx = x + 3; wx < x + w - 3; wx += winSpacingX) {
+        const hash = ((wx * 7 + wy * 13) | 0) % 11;
+        if (hash < 2 + b.windowDensity * 4) {
+          const flicker = Math.sin(t / (500 * b.flickerRate) + wx * 0.25 + wy * 0.15);
+          if (b.windowColor === 0) {
+            c.fillStyle = `rgba(255, ${155 + flicker * 45}, ${55 + flicker * 25}, ${0.3 + 0.3 * flicker})`;
+          } else if (b.windowColor === 1) {
+            c.fillStyle = `rgba(90, 170, ${210 + flicker * 40}, ${0.18 + 0.18 * flicker})`;
+          } else {
+            c.fillStyle = `rgba(${200 + flicker * 40}, 100, ${180 + flicker * 30}, ${0.2 + 0.2 * flicker})`;
+          }
+          c.fillRect(wx, wy, 2.5, 4);
+        }
+      }
+    }
+
+    /* Neon signs */
+    if (b.hasSign) {
+      const signPulse = 0.5 + 0.5 * Math.sin(t / 350 + b.signHue * 12);
+      const cols = ['rgba(255,51,71,', 'rgba(0,229,255,', 'rgba(255,179,71,', 'rgba(117,255,145,'];
+      const col = cols[Math.floor(b.signHue * 4)];
+      c.shadowColor = col + '0.7)';
+      c.shadowBlur = 10;
+      c.fillStyle = col + (signPulse * 0.85) + ')';
+      c.fillRect(x + 2, topY + h * 0.25, w * 0.6, 3);
+      /* Second sign line */
+      if (b.isScraper) {
+        c.fillRect(x + 2, topY + h * 0.55, w * 0.4, 3);
+      }
+      c.shadowBlur = 0;
+    }
+  }
+
+  /* MegaTower Architectural Crown & Observation Deck */
+  if (b.isMegaTower) {
+    const crownW = w * 0.65;
+    const crownH = 38;
+    const crownX = x + (w - crownW) / 2;
+    const crownY = topY - crownH;
+
+    c.fillStyle = cyber ? 'rgba(0, 32, 48, 0.95)' : '#202b36';
+    c.fillRect(crownX, crownY, crownW, crownH);
+    c.strokeStyle = cyber ? 'rgba(0, 229, 255, 0.6)' : 'rgba(255, 255, 255, 0.08)';
+    c.lineWidth = 0.8;
+    c.strokeRect(crownX, crownY, crownW, crownH);
+
+    /* Observation deck band */
+    const obsPulse = 0.6 + 0.4 * Math.sin(t / 400 + b.pulseOffset);
+    c.fillStyle = cyber ? `rgba(0, 229, 255, ${obsPulse * 0.85})` : `rgba(255, 179, 71, ${obsPulse * 0.8})`;
+    c.fillRect(crownX + 2, crownY + crownH * 0.38, crownW - 4, 3.5);
+
+    /* Twin communications spires */
+    const spireH = 42;
+    [-1, 1].forEach(side => {
+      const sx = crownX + crownW / 2 + side * (crownW * 0.35);
+      c.strokeStyle = cyber ? 'rgba(0, 229, 255, 0.7)' : 'rgba(255, 51, 71, 0.5)';
+      c.lineWidth = 1.2;
+      c.beginPath(); c.moveTo(sx, crownY); c.lineTo(sx, crownY - spireH); c.stroke();
+
+      if (Math.sin(t / 300 + side * 1.5 + b.pulseOffset) > 0) {
+        c.fillStyle = cyber ? '#00E5FF' : '#FF3347';
+        c.shadowColor = c.fillStyle; c.shadowBlur = 8;
+        c.beginPath(); c.arc(sx, crownY - spireH, 2.2, 0, Math.PI * 2); c.fill();
+        c.shadowBlur = 0;
+      }
+    });
+  }
+
+  /* Spire on scrapers */
+  if (b.hasSpire && !b.isMegaTower) {
+    const spireH = 25 + (b.h / 10);
+    c.strokeStyle = cyber ? 'rgba(0,229,255,0.5)' : 'rgba(200,210,220,0.3)';
+    c.lineWidth = 1.5;
+    c.beginPath();
+    c.moveTo(x + w / 2, topY);
+    c.lineTo(x + w / 2, topY - spireH);
+    c.stroke();
+    /* Top light */
+    const blink = Math.sin(t / 250 + b.pulseOffset) > 0;
+    if (blink) {
+      c.fillStyle = cyber ? '#00E5FF' : '#FF3347';
+      c.shadowColor = c.fillStyle;
+      c.shadowBlur = 8;
+      c.beginPath(); c.arc(x + w / 2, topY - spireH, 2.5, 0, Math.PI * 2); c.fill();
+      c.shadowBlur = 0;
+    }
+  }
+
+  /* Antenna */
+  if (b.hasAntenna && !b.hasSpire) {
+    c.strokeStyle = cyber ? 'rgba(0,229,255,0.5)' : 'rgba(255,51,71,0.4)';
+    c.lineWidth = 0.8;
+    c.beginPath();
+    c.moveTo(x + w / 2, topY);
+    c.lineTo(x + w / 2, topY - 16);
+    c.stroke();
+
+    const blink = Math.sin(t / 280 + b.pulseOffset) > 0.3;
+    if (blink) {
+      c.fillStyle = cyber ? '#00E5FF' : '#FF3347';
+      c.shadowColor = c.fillStyle; c.shadowBlur = 5;
+      c.beginPath(); c.arc(x + w / 2, topY - 16, 1.5, 0, Math.PI * 2); c.fill();
+      c.shadowBlur = 0;
+    }
+  }
+
+  /* Crane on buildings under construction */
+  if (b.hasCrane) {
+    const craneX = x + w * 0.7;
+    const craneTop = topY - 30;
+    c.strokeStyle = cyber ? 'rgba(255,179,71,0.5)' : 'rgba(255,179,71,0.3)';
+    c.lineWidth = 1;
+    /* Vertical mast */
+    c.beginPath(); c.moveTo(craneX, topY); c.lineTo(craneX, craneTop); c.stroke();
+    /* Horizontal jib */
+    c.beginPath(); c.moveTo(craneX - 20, craneTop); c.lineTo(craneX + 30, craneTop); c.stroke();
+    /* Cable */
+    const cableSwing = Math.sin(t / 800 + b.pulseOffset) * 5;
+    c.beginPath(); c.moveTo(craneX + 20, craneTop); c.lineTo(craneX + 20 + cableSwing, craneTop + 18); c.stroke();
+    /* Warning light */
+    if (Math.sin(t / 400) > 0) {
+      c.fillStyle = '#FFB347'; c.shadowColor = '#FFB347'; c.shadowBlur = 6;
+      c.beginPath(); c.arc(craneX, craneTop, 2, 0, Math.PI * 2); c.fill();
+      c.shadowBlur = 0;
+    }
+  }
+}
+
+/* ── Render entire city scene ── */
+function renderCity(c, cyber, t) {
+  /* Smooth spring interpolation for parallax */
+  smoothPx += (px - smoothPx) * 0.06;
+  smoothPy += (py - smoothPy) * 0.06;
+
+  /* Sky gradient */
+  const sky = c.createLinearGradient(0, 0, 0, H);
+  if (cyber) {
+    sky.addColorStop(0, '#020a10');
+    sky.addColorStop(0.3, '#041820');
+    sky.addColorStop(0.7, '#08121a');
+    sky.addColorStop(1, '#0a0510');
+  } else {
+    sky.addColorStop(0, '#080c12');
+    sky.addColorStop(0.25, '#0e1420');
+    sky.addColorStop(0.5, '#150e18');
+    sky.addColorStop(0.75, '#1a0e16');
+    sky.addColorStop(1, '#10080c');
+  }
+  c.fillStyle = sky;
+  c.fillRect(0, 0, W, H);
+
+  /* Stars */
+  if (!cyber) {
+    const starSeed = rnd(99);
+    for (let i = 0; i < 100; i++) {
+      const sx = starSeed() * W;
+      const sy = starSeed() * H * 0.45;
+      const twinkle = 0.15 + 0.35 * Math.sin(t / 900 + i * 2.1);
+      c.fillStyle = `rgba(255, 255, 255, ${twinkle})`;
+      const sz = starSeed() < 0.1 ? 1.5 : 1;
+      c.fillRect(sx, sy, sz, sz);
+    }
+  }
+
+  /* Distant glow on horizon */
+  const horizonGlow = c.createRadialGradient(W * 0.5, H * 0.85, 0, W * 0.5, H * 0.85, W * 0.6);
+  if (cyber) {
+    horizonGlow.addColorStop(0, 'rgba(0, 229, 255, 0.06)');
+    horizonGlow.addColorStop(1, 'transparent');
+  } else {
+    horizonGlow.addColorStop(0, 'rgba(255, 51, 71, 0.04)');
+    horizonGlow.addColorStop(0.5, 'rgba(255, 120, 50, 0.02)');
+    horizonGlow.addColorStop(1, 'transparent');
+  }
+  c.fillStyle = horizonGlow;
+  c.fillRect(0, 0, W, H);
+
+  const plx = (smoothPx - 0.5) * -24;
+
+  /* Satellites */
+  satellites.forEach(s => {
+    s.x += s.v * s.dir;
+    s.phase += 0.015;
+    if (s.x > W + 30) s.x = -30;
+    if (s.x < -30) s.x = W + 30;
+
+    const sx = s.x + plx * 0.1;
+    const sy = s.y;
+
+    /* Solar panels */
+    c.fillStyle = cyber ? 'rgba(0,229,255,0.5)' : 'rgba(200,210,220,0.4)';
+    c.fillRect(sx - s.size, sy - 0.5, s.size * 2, 1);
+    c.fillRect(sx - 1, sy - 1, 2, 2);
+
+    /* Blinking */
+    if (Math.sin(s.phase * 4) > 0.7) {
+      c.fillStyle = cyber ? '#75FF91' : '#FF3347';
+      c.fillRect(sx - 0.5, sy - 0.5, 1, 1);
+    }
+
+    /* Signal beam down (cyber) */
+    if (cyber) {
+      c.strokeStyle = `rgba(0, 229, 255, ${0.03 + 0.02 * Math.sin(s.phase)})`;
+      c.lineWidth = 0.5;
+      c.setLineDash([3, 6]);
+      c.beginPath(); c.moveTo(sx, sy + 2); c.lineTo(sx + 15, H * 0.6); c.stroke();
+      c.setLineDash([]);
+    }
+  });
+
+  /* Cyber ground grid */
+  if (cyber) {
+    c.strokeStyle = 'rgba(0, 229, 255, 0.06)';
+    c.lineWidth = 0.4;
+    for (let gy = H - 40; gy < H + 20; gy += 10) {
+      c.beginPath(); c.moveTo(0, gy); c.lineTo(W, gy); c.stroke();
+    }
+    for (let gx = -60; gx < W + 60; gx += 30) {
+      const offset = plx * 0.4;
+      c.beginPath();
+      c.moveTo(gx + offset, H - 50);
+      c.lineTo(gx + offset - 25, H + 20);
+      c.stroke();
+    }
+  }
+
+  /* Buildings back to front */
+  buildings.forEach(b => drawBuilding(c, b, cyber, t, plx));
+
+  /* Holographic billboards (drawn after buildings for layering) */
+  holograms.forEach(hg => {
+    const hx = hg.bx + plx * (1 + hg.row * 0.5);
+    const hy = hg.by - hg.bh;
+    hg.phase += 0.02;
+
+    const holoAlpha = 0.25 + 0.15 * Math.sin(hg.phase);
+    const holoW = hg.bw * 1.2;
+    const holoH = 18;
+    const holoY = hy - 22;
+
+    /* Hologram projection */
+    c.fillStyle = cyber
+      ? `rgba(0, 229, 255, ${holoAlpha * 0.7})`
+      : `rgba(255, 51, 71, ${holoAlpha * 0.5})`;
+    c.fillRect(hx - 2, holoY, holoW, holoH);
+
+    /* Glitch lines */
+    if (Math.sin(hg.phase * 5) > 0.8) {
+      c.fillStyle = 'rgba(255,255,255,0.15)';
+      c.fillRect(hx, holoY + Math.random() * holoH, holoW * 0.7, 1);
+    }
+
+    /* Text */
+    c.font = '9px IBM Plex Mono, monospace';
+    c.fillStyle = cyber ? `rgba(0,229,255,${holoAlpha + 0.3})` : `rgba(255,51,71,${holoAlpha + 0.2})`;
+    c.fillText(hg.text, hx + 2, holoY + 12);
+
+    /* Projection beams */
+    c.strokeStyle = cyber ? 'rgba(0,229,255,0.08)' : 'rgba(255,51,71,0.05)';
+    c.lineWidth = 0.3;
+    c.beginPath();
+    c.moveTo(hx + holoW * 0.3, holoY + holoH);
+    c.lineTo(hx + holoW * 0.2, hy);
+    c.moveTo(hx + holoW * 0.7, holoY + holoH);
+    c.lineTo(hx + holoW * 0.8, hy);
+    c.stroke();
+  });
+
+  /* Ground */
+  const groundGrad = c.createLinearGradient(0, H - 25, 0, H);
+  if (cyber) {
+    groundGrad.addColorStop(0, 'rgba(0, 25, 35, 0.5)');
+    groundGrad.addColorStop(1, 'rgba(0, 15, 22, 0.9)');
+  } else {
+    groundGrad.addColorStop(0, 'rgba(14, 10, 12, 0.5)');
+    groundGrad.addColorStop(1, 'rgba(8, 6, 8, 0.95)');
+  }
+  c.fillStyle = groundGrad;
+  c.fillRect(0, H - 25, W, 25);
+
+  /* Street reflections — wet asphalt effect */
+  if (!cyber) {
+    c.globalAlpha = 0.03;
+    buildings.forEach(b => {
+      if (b.row < 2 && b.hasSign) {
+        const bx = b.x + plx * (1 + b.row * 0.5);
+        const refY = b.y + 2;
+        c.fillStyle = b.signHue < 0.33 ? '#FF3347' : b.signHue < 0.66 ? '#00E5FF' : '#FFB347';
+        c.fillRect(bx, refY, b.w, 12);
+      }
+    });
+    c.globalAlpha = 1;
+  }
+
+  /* Ground vehicles with glow trails */
+  vehicles.forEach(v => {
+    v.x += v.v * v.dir * 0.7;
+    if (v.x > W + 30) v.x = -30;
+    if (v.x < -30) v.x = W + 30;
+
+    const trailLen = v.trail * 2;
+    const trailGrad = c.createLinearGradient(v.x - trailLen * v.dir, v.y, v.x, v.y);
+    trailGrad.addColorStop(0, 'transparent');
+    const trailColor = cyber ? 'rgba(0,229,255,0.4)' : v.color.replace(')', ',0.35)').replace('#', 'rgba(').replace(/([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})/i, (m,r,g,b) => parseInt(r,16)+','+parseInt(g,16)+','+parseInt(b,16));
+    trailGrad.addColorStop(1, cyber ? 'rgba(0,229,255,0.4)' : v.color);
+
+    /* Simplified trail */
+    c.globalAlpha = 0.35;
+    c.fillStyle = cyber ? '#00E5FF' : v.color;
+    c.fillRect(Math.min(v.x - trailLen * v.dir, v.x), v.y - 0.5, Math.abs(trailLen * v.dir) + 3, 1.5);
+    c.globalAlpha = 1;
+
+    /* Vehicle body */
+    c.fillStyle = cyber ? '#00E5FF' : v.color;
+    c.fillRect(v.x - 2, v.y - 1.5, 5, 3);
+
+    /* Headlight glow */
+    c.shadowColor = cyber ? '#00E5FF' : v.color;
+    c.shadowBlur = 4;
+    c.fillRect(v.x + (v.dir > 0 ? 3 : -2), v.y - 0.5, 1, 1);
+    c.shadowBlur = 0;
+  });
+
+  /* Flying skycars (Spinners) in aerial corridors */
+  skyCars.forEach(sc => {
+    sc.x += sc.v * sc.dir;
+    if (sc.x > W + 60) sc.x = -60;
+    if (sc.x < -60) sc.x = W + 60;
+
+    const bob = Math.sin(t / 550 + sc.altPhase) * 3.5;
+    const sx = sc.x + plx * 0.35;
+    const sy = sc.y + bob;
+    const trailLen = sc.trailLen;
+
+    /* Ion exhaust trail */
+    const grad = c.createLinearGradient(sx - trailLen * sc.dir, sy, sx, sy);
+    grad.addColorStop(0, 'transparent');
+    grad.addColorStop(0.7, cyber ? 'rgba(0, 229, 255, 0.25)' : 'rgba(255, 179, 71, 0.25)');
+    grad.addColorStop(1, cyber ? '#00E5FF' : sc.color);
+    c.strokeStyle = grad;
+    c.lineWidth = 1.6;
+    c.beginPath();
+    c.moveTo(sx - trailLen * sc.dir, sy);
+    c.lineTo(sx, sy);
+    c.stroke();
+
+    /* Spinner chassis */
+    c.fillStyle = cyber ? '#021822' : '#141c22';
+    c.fillRect(sx - 4.5, sy - 1.5, 9, 3);
+    c.strokeStyle = cyber ? 'rgba(0,229,255,0.5)' : 'rgba(255,255,255,0.15)';
+    c.lineWidth = 0.5;
+    c.strokeRect(sx - 4.5, sy - 1.5, 9, 3);
+
+    /* Cockpit glow */
+    c.fillStyle = cyber ? '#00E5FF' : sc.color;
+    c.fillRect(sx + (sc.dir > 0 ? 1.5 : -3.5), sy - 1, 2.5, 1.5);
+
+    /* Anti-collision strobe */
+    if (Math.sin(t / 220 + sc.altPhase) > 0.65) {
+      c.fillStyle = '#FF3347';
+      c.shadowColor = '#FF3347'; c.shadowBlur = 5;
+      c.beginPath(); c.arc(sx, sy - 2, 1, 0, Math.PI * 2); c.fill();
+      c.shadowBlur = 0;
+    }
+  });
+
+  /* Drones with searchlights */
+  drones.forEach(d => {
+    d.x += d.v * d.dir * 0.6;
+    d.blinkPhase += 0.025;
+    d.searchAngle += 0.008;
+    if (d.x > W + 50) d.x = -50;
+    if (d.x < -50) d.x = W + 50;
+
+    const bx = d.x + plx * 0.25;
+    const by = d.y;
+
+    /* Searchlight cone (cyber) */
+    if (cyber) {
+      const coneOffset = Math.sin(d.searchAngle) * 35;
+      c.fillStyle = 'rgba(0, 229, 255, 0.025)';
+      c.beginPath();
+      c.moveTo(bx, by + d.size / 2);
+      c.lineTo(bx - 20 + coneOffset, H - 25);
+      c.lineTo(bx + 20 + coneOffset, H - 25);
+      c.closePath(); c.fill();
+    }
+
+    /* Drone body */
+    c.fillStyle = cyber ? '#00E5FF' : 'rgba(126,145,155,0.7)';
+    c.fillRect(bx - d.size / 2, by, d.size, 2.5);
+    c.fillRect(bx - 1.5, by - 2, 3, 6.5);
+
+    /* Rotor spin effect */
+    const rotorPhase = t / 30 + d.blinkPhase;
+    c.strokeStyle = cyber ? 'rgba(0,229,255,0.2)' : 'rgba(200,210,220,0.1)';
+    c.lineWidth = 0.3;
+    c.beginPath();
+    c.arc(bx - d.size / 2 + 2, by, 3, rotorPhase, rotorPhase + Math.PI);
+    c.stroke();
+    c.beginPath();
+    c.arc(bx + d.size / 2 - 2, by, 3, rotorPhase + Math.PI, rotorPhase + Math.PI * 2);
+    c.stroke();
+
+    /* Navigation lights */
+    if (Math.sin(d.blinkPhase * 3.5) > 0.5) {
+      c.fillStyle = cyber ? '#75FF91' : '#FF3347';
+      c.shadowColor = c.fillStyle; c.shadowBlur = 4;
+      c.beginPath(); c.arc(bx, by - 2, 1.2, 0, Math.PI * 2); c.fill();
+      c.shadowBlur = 0;
+    }
+  });
+
+  /* Data connections between buildings (cyber) */
+  if (cyber) {
+    c.lineWidth = 0.5;
+    const connB = buildings.filter((_, i) => i % 8 === 0);
+    for (let i = 0; i < connB.length - 1; i++) {
+      const a = connB[i], b = connB[i + 1];
+      const ax = a.x + a.w / 2 + plx * (1 + a.row * 0.5);
+      const ay = a.y - a.h;
+      const bxx = b.x + b.w / 2 + plx * (1 + b.row * 0.5);
+      const by = b.y - b.h;
+
+      c.strokeStyle = `rgba(0,229,255,${0.1 + 0.05 * Math.sin(t / 700 + i)})`;
+      c.beginPath(); c.moveTo(ax, ay);
+      c.quadraticCurveTo((ax + bxx) / 2, Math.min(ay, by) - 35, bxx, by);
+      c.stroke();
+
+      /* Data packets */
+      for (let p = 0; p < 2; p++) {
+        const pos = ((t / 1800 + i * 0.25 + p * 0.5) % 1);
+        const ppx = ax + (bxx - ax) * pos;
+        const ppy = ay + (by - ay) * pos - 35 * Math.sin(pos * Math.PI);
+        c.fillStyle = p === 0 ? '#75FF91' : '#FFB347';
+        c.fillRect(ppx - 1.5, ppy - 1.5, 3, 3);
+      }
+    }
+
+    /* Threat indicators */
+    c.fillStyle = '#FFB347';
+    c.font = '10px IBM Plex Mono, monospace';
+    c.globalAlpha = 0.45 + 0.25 * Math.sin(t / 500);
+    c.fillText('⚠ SIMULATED // NODE COMPROMISED', W * 0.06, H * 0.10);
+    c.fillText('⚠ SIMULATED // TRUST BOUNDARY', W * 0.52, H * 0.18);
+    c.fillText('▶ SCANNING // ACTIVE THREATS', W * 0.30, H * 0.08);
+    c.globalAlpha = 1;
+
+    /* Scanning sweep line */
+    const sweepX = ((t / 30) % W);
+    c.strokeStyle = 'rgba(0,229,255,0.06)';
+    c.lineWidth = 1;
+    c.beginPath(); c.moveTo(sweepX, 0); c.lineTo(sweepX, H); c.stroke();
+  }
+}
+
+/* ── Main animation loop with smooth timing ── */
+let lastFrame = 0;
+function frame(t) {
+  requestAnimationFrame(frame);
+  if (!vis) return;
+  const dt = Math.min(50, t - lastFrame);
+  lastFrame = t;
+
+  cx.save();
+  renderCity(cx, full, t);
+
+  /* Scanner circle overlay */
+  if (!full && mx > -900) {
+    const R = rad * Math.min(W, H) * (W < 700 ? 1.1 : 1);
+    cx.save();
+    cx.beginPath();
+    cx.arc(mx, my, R, 0, Math.PI * 2);
+    cx.clip();
+    renderCity(cx, true, t);
+    cx.restore();
+
+    /* Rotating scanner ring */
+    cx.save();
+    cx.translate(mx, my);
+    const rot = t / 1200;
+
+    /* Outer ring segments */
+    cx.strokeStyle = 'rgba(255, 51, 71, 0.65)';
+    cx.lineWidth = 1.8;
+    cx.beginPath(); cx.arc(0, 0, R, rot, rot + Math.PI * 0.4); cx.stroke();
+    cx.beginPath(); cx.arc(0, 0, R, rot + Math.PI, rot + Math.PI * 1.4); cx.stroke();
+
+    cx.strokeStyle = 'rgba(0, 229, 255, 0.4)';
+    cx.lineWidth = 1;
+    cx.beginPath(); cx.arc(0, 0, R, rot + Math.PI * 0.5, rot + Math.PI * 0.9); cx.stroke();
+    cx.beginPath(); cx.arc(0, 0, R, rot + Math.PI * 1.5, rot + Math.PI * 1.9); cx.stroke();
+
+    /* Crosshairs */
+    cx.strokeStyle = 'rgba(255, 51, 71, 0.6)';
+    cx.lineWidth = 1;
+    cx.beginPath();
+    cx.moveTo(-R - 10, 0); cx.lineTo(-R + 12, 0);
+    cx.moveTo(R - 12, 0); cx.lineTo(R + 10, 0);
+    cx.moveTo(0, -R - 10); cx.lineTo(0, -R + 12);
+    cx.moveTo(0, R - 12); cx.lineTo(0, R + 10);
+    cx.stroke();
+
+    /* Inner rings */
+    cx.strokeStyle = 'rgba(0, 229, 255, 0.15)';
+    cx.beginPath(); cx.arc(0, 0, R * 0.65, 0, Math.PI * 2); cx.stroke();
+    cx.strokeStyle = 'rgba(0, 229, 255, 0.08)';
+    cx.beginPath(); cx.arc(0, 0, R * 0.35, 0, Math.PI * 2); cx.stroke();
+
+    /* Center dot */
+    cx.fillStyle = 'rgba(255, 51, 71, 0.4)';
+    cx.beginPath(); cx.arc(0, 0, 2, 0, Math.PI * 2); cx.fill();
+
+    /* Scanner info text */
+    cx.fillStyle = 'rgba(0, 229, 255, 0.5)';
+    cx.font = '8px IBM Plex Mono, monospace';
+    cx.fillText('SCANNING', -R + 14, -R + 14);
+
+    cx.restore();
+  }
+
+  /* Rain */
+  if (!RM) {
+    cx.strokeStyle = 'rgba(160, 190, 210, 0.15)';
+    cx.lineWidth = 0.7;
+    cx.beginPath();
+    drops.forEach(d => {
+      d.y += d.v * dt * 0.65;
+      d.x -= dt * 0.035;
+      if (d.y > H) { d.y = -25; d.x = Math.random() * (W + 300) - 150; }
+      cx.moveTo(d.x, d.y);
+      cx.lineTo(d.x - 0.8, d.y + d.len);
+    });
+    cx.stroke();
+
+    /* Lightning */
+    if (Math.random() < 0.0008) flash = 1;
+    if (flash > 0) {
+      cx.fillStyle = `rgba(200, 220, 255, ${flash * 0.1})`;
+      cx.fillRect(0, 0, W, H);
+      flash -= dt / 350;
+    }
+  }
+
+  cx.restore();
+}
+
+size();
+addEventListener('resize', size);
+requestAnimationFrame(frame);
+document.addEventListener('visibilitychange', () => vis = !document.hidden);
+const heroObserver = new IntersectionObserver(([entry]) => {
+  vis = entry.isIntersecting && !document.hidden;
+}, { threshold: 0.05 });
+const hEl = $('#hero');
+if (hEl) heroObserver.observe(hEl);
+
+/* ── Pointer interaction ── */
+function pt(e) {
+  if (locked) return;
+  const r = cv.getBoundingClientRect();
+  mx = e.clientX - r.left;
+  my = e.clientY - r.top;
+  px = mx / W;
+  py = my / H;
+}
+
+$('#hero').addEventListener('pointermove', pt);
+$('#hero').addEventListener('pointerdown', e => {
+  if (e.target.closest('#hud>*:not(.ctl.panel)') && e.target.closest('a,button,input,label')) return;
+  pt(e);
+});
+
+cv.addEventListener('click', () => { locked = !locked; lk(); });
+
+function lk() {
+  $('#lock').setAttribute('aria-pressed', locked);
+  $('#lock').textContent = locked ? 'UNLOCK SCANNER' : 'LOCK SCANNER';
+}
+
+$('#lock').onclick = () => { locked = !locked; lk(); };
+
+function mode(f) {
+  full = f;
+  $('#mCyber').setAttribute('aria-pressed', f);
+  $('#mReal').setAttribute('aria-pressed', !f);
+}
+
+$('#mReal').onclick = () => mode(false);
+$('#mCyber').onclick = () => mode(true);
+$('#rad').oninput = e => { rad = e.target.value / 100; $('#radv').textContent = e.target.value + '%'; };
+
+addEventListener('keydown', e => {
+  if (/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+  if (e.key === 's' || e.key === 'S') {
+    if (mx < -900) { mx = W / 2; my = H / 2; }
+    else { mx = -999; locked = false; lk(); }
+  }
+});
+
+/* ═══════════════════════════════════════════════
+   SWARMSEC TOPOLOGY
+   ═══════════════════════════════════════════════ */
+(function() {
+  const c = $('#swc'), x = c.getContext('2d');
+  const N = [];
+  for (let i = 0; i < 8; i++) {
+    const a = i / 8 * Math.PI * 2;
+    N.push({
+      x: 220 + Math.cos(a) * (i % 2 ? 85 : 150),
+      y: 130 + Math.sin(a) * (i % 2 ? 55 : 100),
+      pulse: Math.random() * Math.PI * 2
+    });
+  }
+
+  let sel = -1;
+
+  function d(t) {
+    x.clearRect(0, 0, 440, 260);
+
+    N.forEach((a, i) => {
+      [1, 3].forEach(k => {
+        const b = N[(i + k) % 8];
+        x.strokeStyle = '#202A31'; x.lineWidth = 1;
+        x.beginPath(); x.moveTo(a.x, a.y); x.lineTo(b.x, b.y); x.stroke();
+
+        const pPos = ((t / 3000 + i * 0.2 + k * 0.1) % 1);
+        const ppx = a.x + (b.x - a.x) * pPos;
+        const ppy = a.y + (b.y - a.y) * pPos;
+        x.fillStyle = `rgba(117, 255, 145, ${0.3 + 0.3 * Math.sin(t / 200 + i)})`;
+        x.fillRect(ppx - 1.5, ppy - 1.5, 3, 3);
+      });
+    });
+
+    if (sel >= 0) {
+      x.lineWidth = 1;
+      N.forEach((b, i) => {
+        if (i !== sel) {
+          x.strokeStyle = `rgba(0, 229, 255, ${0.3 + 0.2 * Math.sin(t / 400 + i)})`;
+          x.beginPath(); x.moveTo(N[sel].x, N[sel].y); x.lineTo(b.x, b.y); x.stroke();
+        }
+      });
+    }
+
+    N.forEach((n, i) => {
+      n.pulse += 0.02;
+      const isSelected = i === sel;
+      const color = isSelected ? '#00E5FF' : '#FF3347';
+      x.fillStyle = isSelected ? 'rgba(0, 229, 255, 0.25)' : 'rgba(255, 51, 71, 0.2)';
+      x.fillRect(n.x - 9, n.y - 9, 18, 18);
+      x.fillStyle = color;
+      x.fillRect(n.x - 5, n.y - 5, 10, 10);
+    });
+
+    x.fillStyle = '#7E919B'; x.font = '11px IBM Plex Mono, monospace';
+    x.fillText('ILLUSTRATIVE PEER-TO-PEER MESH', 8, 252);
+  }
+
+  function animLoop(t) { d(t); requestAnimationFrame(animLoop); }
+  if (!RM) requestAnimationFrame(animLoop); else d(0);
+
+  c.onclick = e => {
+    const r = c.getBoundingClientRect();
+    const ppx = (e.clientX - r.left) * 440 / r.width;
+    const ppy = (e.clientY - r.top) * 260 / r.height;
+    sel = N.findIndex(n => Math.abs(n.x - ppx) < 16 && Math.abs(n.y - ppy) < 16);
+    $('#swi').textContent = sel >= 0
+      ? 'PEER ' + (sel + 1) + ' // illustrative peer that would share and validate IOCs with other peers.'
+      : 'Click a node to inspect (illustrative).';
+  };
+})();
+
+/* ═══════════════════════════════════════════════
+   CYBEREYE ATTACK SURFACE RECON RADAR
+   ═══════════════════════════════════════════════ */
+(function() {
+  const c = $('#cec');
+  if (!c) return;
+  const cx = c.getContext('2d');
+  const W = 440, H = 260;
+  const centerX = 220, centerY = 130;
+
+  const TARGETS = [
+    { name: "target.corp", type: "ROOT DOMAIN", status: "200 OK", ip: "104.21.48.1", r: 0, theta: 0, color: "#00E5FF" },
+    { name: "api.target.corp", type: "REST API", status: "200 OK", ip: "104.21.48.2", r: 62, theta: 0.6, color: "#75FF91" },
+    { name: "auth.target.corp", type: "OAUTH2 / IAM", status: "200 OK", ip: "104.21.48.3", r: 84, theta: 1.9, color: "#75FF91" },
+    { name: "vpn.target.corp", type: "EDGE GATEWAY", status: "403 RESTRICTED", ip: "198.51.100.14", r: 76, theta: 3.1, color: "#FFB347" },
+    { name: "dev-stage.target.corp", type: "VULN // TAKEOVER", status: "DANGLING CNAME", ip: "AWS-S3-DANGLING", r: 96, theta: 4.4, color: "#FF3347" },
+    { name: "assets.s3.target.corp", type: "CLOUD STORAGE", status: "PUBLIC READ", ip: "s3.us-east-1", r: 104, theta: 5.6, color: "#00E5FF" }
+  ];
+
+  let selected = -1;
+  let radarAngle = 0;
+
+  function drawRadar(t) {
+    cx.clearRect(0, 0, W, H);
+
+    /* Sonar range rings */
+    [32, 68, 104].forEach((rad, idx) => {
+      cx.strokeStyle = 'rgba(0, 229, 255, 0.12)';
+      cx.lineWidth = 1;
+      cx.beginPath();
+      cx.arc(centerX, centerY, rad, 0, Math.PI * 2);
+      cx.stroke();
+
+      cx.fillStyle = 'rgba(0, 229, 255, 0.3)';
+      cx.font = '8px IBM Plex Mono, monospace';
+      cx.fillText((idx + 1) * 100 + 'ms', centerX + rad - 18, centerY - 4);
+    });
+
+    /* Cross grid axes */
+    cx.strokeStyle = 'rgba(32, 42, 49, 0.7)';
+    cx.lineWidth = 0.8;
+    cx.beginPath();
+    cx.moveTo(centerX, 15); cx.lineTo(centerX, H - 15);
+    cx.moveTo(25, centerY); cx.lineTo(W - 25, centerY);
+    cx.stroke();
+
+    /* Rotating radar beam sweep */
+    radarAngle = (t / 1400) % (Math.PI * 2);
+    cx.save();
+    cx.translate(centerX, centerY);
+    cx.rotate(radarAngle);
+
+    const sweepGrad = cx.createRadialGradient(0, 0, 0, 0, 0, 115);
+    sweepGrad.addColorStop(0, 'rgba(0, 229, 255, 0.22)');
+    sweepGrad.addColorStop(1, 'rgba(0, 229, 255, 0.0)');
+    cx.fillStyle = sweepGrad;
+    cx.beginPath();
+    cx.moveTo(0, 0);
+    cx.arc(0, 0, 115, -0.4, 0);
+    cx.closePath();
+    cx.fill();
+
+    cx.strokeStyle = '#00E5FF';
+    cx.lineWidth = 1.2;
+    cx.beginPath();
+    cx.moveTo(0, 0);
+    cx.lineTo(115, 0);
+    cx.stroke();
+    cx.restore();
+
+    /* Connect root to subdomains */
+    TARGETS.forEach((node, i) => {
+      const nx = centerX + Math.cos(node.theta) * node.r;
+      const ny = centerY + Math.sin(node.theta) * node.r;
+
+      if (i > 0) {
+        cx.strokeStyle = i === selected ? '#00E5FF' : 'rgba(32, 42, 49, 0.8)';
+        cx.lineWidth = i === selected ? 1.5 : 0.8;
+        cx.beginPath();
+        cx.moveTo(centerX, centerY);
+        cx.lineTo(nx, ny);
+        cx.stroke();
+
+        /* Animated discovery packet */
+        const p = ((t / 2000 + i * 0.2) % 1);
+        const px = centerX + (nx - centerX) * p;
+        const py = centerY + (ny - centerY) * p;
+        cx.fillStyle = node.color;
+        cx.fillRect(px - 1.5, py - 1.5, 3, 3);
+      }
+
+      /* Target node badge */
+      const isSel = i === selected;
+      const angleDiff = Math.abs((radarAngle - node.theta + Math.PI * 4) % (Math.PI * 2));
+      const ping = angleDiff < 0.35 ? 1 - (angleDiff / 0.35) : 0;
+
+      if (ping > 0.05 || isSel) {
+        cx.fillStyle = isSel ? 'rgba(0, 229, 255, 0.25)' : 'rgba(255, 51, 71, 0.2)';
+        cx.beginPath();
+        cx.arc(nx, ny, (i === 0 ? 8 : 7) + ping * 5, 0, Math.PI * 2);
+        cx.fill();
+      }
+
+      cx.fillStyle = isSel ? '#00E5FF' : node.color;
+      cx.beginPath();
+      cx.arc(nx, ny, i === 0 ? 5 : 4 + ping * 1.5, 0, Math.PI * 2);
+      cx.fill();
+
+      /* Label */
+      cx.fillStyle = isSel ? '#FFFFFF' : '#7E919B';
+      cx.font = '9px IBM Plex Mono, monospace';
+      cx.fillText(node.name, nx + 7, ny + 3);
+    });
+
+    /* Live status badge */
+    cx.fillStyle = 'rgba(0, 229, 255, 0.7)';
+    cx.font = '9px IBM Plex Mono, monospace';
+    cx.fillText('TARGETS DISCOVERED: 6 // ACTIVE MONITORING', 12, 250);
+  }
+
+  function loop(t) {
+    drawRadar(t);
+    requestAnimationFrame(loop);
+  }
+  if (!RM) requestAnimationFrame(loop); else drawRadar(0);
+
+  c.onclick = e => {
+    const r = c.getBoundingClientRect();
+    const ppx = (e.clientX - r.left) * W / r.width;
+    const ppy = (e.clientY - r.top) * H / r.height;
+
+    selected = TARGETS.findIndex(n => {
+      const nx = centerX + Math.cos(n.theta) * n.r;
+      const ny = centerY + Math.sin(n.theta) * n.r;
+      return Math.hypot(nx - ppx, ny - ppy) < 18;
+    });
+
+    if (selected >= 0) {
+      const n = TARGETS[selected];
+      $('#cei').innerHTML = `<b style="color:${n.color}">[${n.name}]</b> TYPE: ${n.type} | STATUS: ${n.status} | IP: ${n.ip}`;
+    } else {
+      $('#cei').textContent = 'Radar scanning... Click a discovered target node to inspect.';
+    }
+  };
+})();
+
+/* ═══════════════════════════════════════════════
+   THREAT LAB
+   ═══════════════════════════════════════════════ */
+(function() {
+  const c = $('#net'), x = c.getContext('2d');
+  const NODES = [
+    ["WS-1",60,60,'ws','USER'], ["WS-2",60,170,'ws','USER'],
+    ["WS-3",60,280,'ws','USER'], ["FW",190,170,'fw','EDGE'],
+    ["APP-1",320,90,'app','DMZ'], ["APP-2",320,250,'app','DMZ'],
+    ["DB-1",460,170,'db','CORE'], ["SIEM",190,40,'siem','MGMT']
+  ].map((n, i) => ({ id: i, name: n[0], x: n[1], y: n[2], type: n[3], zone: n[4] }));
+  const LINKS = [[0,3],[1,3],[2,3],[3,4],[3,5],[4,6],[5,6],[7,3]];
+  const EV = [
+    { m: "WS-2 failed login x5 (simulated brute force)", n: 1, a: 1 },
+    { m: "WS-2 outbound connection to unknown host", n: 1, a: 1, b: 1 },
+    { m: "WS-2 probes APP-2 on port 8080", n: 5, a: 1, b: 1 },
+    { m: "SIEM correlates events, alert raised", n: 7, a: 1 },
+    { m: "APP-2 policy violation: unexpected process", n: 5, a: 1, b: 1 },
+    { m: "SIEM recommends isolating WS-2", n: 7, a: 0 },
+    { m: "WS-2 isolated from network", n: 1, iso: 1 },
+    { m: "DB-1 connection attempt from WS-2 denied", n: 6, a: 0 }
+  ];
+
+  let st, timer = null, fw = false, labT = 0;
+
+  function init() { st = { i: 0, alerts: 0, iso: new Set(), log: [], blocked: 0, hit: new Set() }; }
+
+  function step() {
+    if (st.i >= EV.length) { pause(); return; }
+    const e = EV[st.i++]; let txt = e.m;
+    if (fw && e.b) { st.blocked++; txt += " // BLOCKED by firewall rule"; }
+    else { if (e.a) st.alerts++; if (e.iso) st.iso.add(e.n); st.hit.add(e.n); }
+    if (fw && e.a && e.b) st.alerts++;
+    st.log.push(`[${String(st.i).padStart(2, '0')}] ${txt}`);
+    draw(labT);
+  }
+
+  function pause() { clearInterval(timer); timer = null; $('#play').textContent = st.i >= EV.length ? 'DONE' : 'START'; }
+
+  function draw(t) {
+    x.clearRect(0, 0, 520, 340);
+    x.lineWidth = 1;
+    LINKS.forEach(l => {
+      const a = NODES[l[0]], b = NODES[l[1]];
+      const isIso = st.iso.has(l[0]) || st.iso.has(l[1]);
+      x.strokeStyle = isIso ? '#FF3347' : 'rgba(32, 42, 49, 0.8)';
+      x.setLineDash(st.iso.has(l[0]) ? [4, 4] : []);
+      x.beginPath(); x.moveTo(a.x, a.y); x.lineTo(b.x, b.y); x.stroke();
+      if (!isIso && t) {
+        const pPos = ((t / 2000 + l[0] * 0.3) % 1);
+        const ppx = a.x + (b.x - a.x) * pPos;
+        const ppy = a.y + (b.y - a.y) * pPos;
+        x.fillStyle = 'rgba(0, 229, 255, 0.4)'; x.fillRect(ppx - 1, ppy - 1, 2, 2);
+      }
+    });
+    x.setLineDash([]);
+
+    NODES.forEach(n => {
+      const col = st.iso.has(n.id) ? '#FF3347' : st.hit.has(n.id) ? '#FFB347' : n.type === 'siem' ? '#75FF91' : '#00E5FF';
+      x.shadowColor = col; x.shadowBlur = st.hit.has(n.id) ? 12 : 5;
+      x.strokeStyle = col; x.fillStyle = '#07090D'; x.lineWidth = 2;
+      x.fillRect(n.x - 24, n.y - 14, 48, 28);
+      x.strokeRect(n.x - 24, n.y - 14, 48, 28);
+      x.shadowBlur = 0;
+      x.fillStyle = '#E7E9E4'; x.font = '11px IBM Plex Mono, monospace';
+      x.textAlign = 'center'; x.fillText(n.name, n.x, n.y + 4);
+    });
+
+    x.textAlign = 'left'; x.fillStyle = '#7E919B';
+    x.fillText('FICTIONAL NETWORK // SIMULATED', 8, 334);
+
+    $('#tel').textContent = `NETWORK STATUS      // SIMULATED\nACTIVE HOSTS        // ${String(8 - st.iso.size).padStart(2, '0')}\nSECURITY ALERTS     // ${String(st.alerts).padStart(2, '0')}\nISOLATED NODES      // ${String(st.iso.size).padStart(2, '0')}\nBLOCKED BY RULE     // ${String(st.blocked).padStart(2, '0')}\nFIREWALL RULE       // ${fw ? 'ON' : 'OFF'}\nEVENT               // ${st.i}/${EV.length}`;
+    const L = $('#log');
+    L.textContent = st.log.join('\n') || 'Event log empty. Press START or STEP.';
+    L.scrollTop = 1e5;
+  }
+
+  function labLoop(t) { labT = t; if (!timer) draw(t); requestAnimationFrame(labLoop); }
+  if (!RM) requestAnimationFrame(labLoop);
+
+  $('#step').onclick = () => { pause(); step(); };
+  $('#play').onclick = () => { if (timer) { pause(); return; } if (st.i >= EV.length) return; $('#play').textContent = 'PAUSE'; timer = setInterval(step, +$('#spd').value); };
+  $('#spd').onchange = () => { if (timer) { clearInterval(timer); timer = setInterval(step, +$('#spd').value); } };
+  $('#reset').onclick = () => { pause(); init(); draw(labT); };
+  $('#fw').onclick = e => { fw = !fw; e.target.setAttribute('aria-pressed', fw); e.target.textContent = 'FIREWALL RULE: ' + (fw ? 'ON' : 'OFF'); pause(); init(); draw(labT); };
+  c.onclick = e => {
+    const r = c.getBoundingClientRect();
+    const pxx = (e.clientX - r.left) * 520 / r.width, pyy = (e.clientY - r.top) * 340 / r.height;
+    const n = NODES.find(n => Math.abs(n.x - pxx) < 26 && Math.abs(n.y - pyy) < 16);
+    if (n) $('#insp').textContent = `NODE ${n.name} // TYPE ${n.type.toUpperCase()} // ZONE ${n.zone} // STATE ${st.iso.has(n.id) ? 'ISOLATED' : st.hit.has(n.id) ? 'AFFECTED' : 'NORMAL'}`;
+  };
+
+  init(); draw(0);
+})();
+
+/* ═══════════════════════════════════════════════
+   NAV ACTIVE LINK TRACKING
+   ═══════════════════════════════════════════════ */
+(function() {
+  const sections = $$('section[id], header[id]');
+  const navLinks = $$('nav a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.style.color = link.getAttribute('href') === '#' + entry.target.id ? 'var(--red)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => observer.observe(s));
+})();
+
+/* ═══════════════════════════════════════════════
+   3D TILT ON PANELS (APPLE-LIKE SPRING PHYSICS + GLARE)
+   ═══════════════════════════════════════════════ */
+if (!RM && matchMedia('(hover: hover)').matches) {
+  $$('.panel, #swarm, #cybereye, .tl-item').forEach(panel => {
+    panel.style.transformStyle = 'preserve-3d';
+
+    let glare = panel.querySelector('.panel-glare');
+    if (!glare) {
+      glare = document.createElement('div');
+      glare.className = 'panel-glare';
+      panel.appendChild(glare);
+    }
+
+    let ticking = false;
+    panel.addEventListener('mouseenter', () => {
+      panel.style.transition = 'transform 0.08s ease-out, border-color 0.4s ease, box-shadow 0.4s ease';
+    });
+
+    panel.addEventListener('mousemove', e => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        const rect = panel.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        const rx = (-y * 7).toFixed(2);
+        const ry = (x * 7).toFixed(2);
+        panel.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-5px) scale(1.01)`;
+
+        const gx = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
+        const gy = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
+        glare.style.background = `radial-gradient(circle at ${gx}% ${gy}%, rgba(0, 229, 255, 0.12), transparent 60%)`;
+        glare.style.opacity = '1';
+      });
+    });
+
+    panel.addEventListener('mouseleave', () => {
+      panel.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease';
+      panel.style.transform = '';
+      glare.style.opacity = '0';
+    });
+  });
+}
+</script>
+</body>
+</html>
